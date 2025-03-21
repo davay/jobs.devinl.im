@@ -1,4 +1,12 @@
 {
+  "name": "scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node --loader ts-node/esm scraper.ts",
+    "build": "tsc",
+    "setup": "npx playwright install chromium"
+  },
   "dependencies": {
     "llm-scraper": "^1.5.1",
     "ollama-ai-provider": "^1.2.0",
