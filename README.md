@@ -12,7 +12,7 @@ So I want to make a similar site except that users can set their own sites and k
 
 ## Design
 
-![](assets/images/mockup2.png)
+![](assets/images/mockup.png)
 
 Next good-to-haves:
 - Location filter 
