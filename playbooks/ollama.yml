@@ -1,0 +1,57 @@
+---
+- name: Setup Ollama Service
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Create ollama user
+      user:
+        name: ollama
+        system: yes
+        create_home: yes
+        home: /usr/share/ollama
+        shell: /bin/false
+        state: present
+
+    - name: Add current user to ollama group
+      user:
+        name: "{{ ansible_user_id }}"
+        groups: ollama
+        append: yes
+
+    - name: Create Ollama service file
+      copy:
+        dest: /etc/systemd/system/ollama.service
+        content: |
+          [Unit]
+          Description=Ollama Service
+          After=network-online.target
+
+          [Service]
+          ExecStart=/usr/bin/ollama serve
+          User=ollama
+          Group=ollama
+          Restart=always
+          RestartSec=3
+          Environment="PATH={{ ansible_env.PATH }}"
+
+          [Install]
+          WantedBy=multi-user.target
+        mode: '0644'
+
+    - name: Reload systemd
+      systemd:
+        daemon_reload: yes
+
+    - name: Enable and start Ollama service
+      systemd:
+        name: ollama
+        enabled: yes
+        state: started
+
+    - name: Wait for Ollama service to fully start
+      wait_for:
+        timeout: 5
+      
+    - name: Pull the smollm2 model
+      become_user: ollama
+      command: ollama pull smollm2
