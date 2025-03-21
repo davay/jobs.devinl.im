@@ -21,3 +21,10 @@ Next good-to-haves:
 ## System Architecture
 
 ![](assets/images/architecture.png)
+
+Design choices:
+- User config stored in client (exportable).
+- API service handles requests, email/browser notifications, and scraper scheduling
+- Postgres stores scraped content, page hash, and scraping history
+- Scraper first does a diff detect on page hash. If page has changed, it will pull the full HTML and passes it to smolLM.
+- SmolLM should let us scrape more reliably from any website without having to manually configure rules for each site.
