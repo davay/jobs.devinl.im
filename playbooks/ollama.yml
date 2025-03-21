@@ -3,6 +3,18 @@
   hosts: localhost
   become: true
   tasks:
+    - name: Download Ollama
+      get_url:
+        url: https://ollama.com/download/ollama-linux-amd64.tgz
+        dest: /tmp/ollama-linux-amd64.tgz
+        mode: '0644'
+
+    - name: Extract Ollama to /usr
+      unarchive:
+        src: /tmp/ollama-linux-amd64.tgz
+        dest: /usr
+        remote_src: yes
+
     - name: Create ollama user
       user:
         name: ollama
