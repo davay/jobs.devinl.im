@@ -1,0 +1,50 @@
+---
+- name: Set up Job Scraper Service
+  hosts: localhost
+  vars:
+    service_name: job-scraper
+    user: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    anthropic_api_key: "{{ lookup('community.general.onepassword', 'Anthropic API Key - jobs.devinl.im', field='credential', vault='Personal') }}"
+    project_root: "{{ playbook_dir | dirname }}"
+    script_path: "{{ project_root }}/scraper/main.py"
+
+  tasks:
+    - name: Create systemd service file
+      become: true
+      ansible.builtin.template:
+        src: templates/{{ service_name }}.service.j2
+        dest: /etc/systemd/system/{{ service_name }}.service
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Create systemd timer file
+      become: true
+      ansible.builtin.template:
+        src: templates/{{ service_name }}.timer.j2
+        dest: /etc/systemd/system/{{ service_name }}.timer
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Reload systemd
+      become: true
+      ansible.builtin.systemd:
+        daemon_reload: yes
+
+    - name: Enable and start the timer
+      become: true
+      ansible.builtin.systemd:
+        name: "{{ service_name }}.timer"
+        enabled: yes
+        state: started
+
+    - name: Check timer status
+      ansible.builtin.command: systemctl list-timers --all
+      register: timer_status
+      changed_when: false
+
+    - name: Display timer status
+      ansible.builtin.debug:
+        var: timer_status.stdout_lines

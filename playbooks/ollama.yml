@@ -64,6 +64,6 @@
       wait_for:
         timeout: 5
       
-    - name: Pull the smollm2 model
+    - name: Pull the language model
       become_user: ollama
-      command: ollama pull smollm2
+      command: ollama pull qwen2.5:14b
