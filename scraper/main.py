@@ -10,7 +10,7 @@ from crawl4ai import (
     CrawlerRunConfig,
     LLMConfig,
 )
-from crawl4ai.content_filter_strategy import LLMContentFilter, PruningContentFilter
+from crawl4ai.content_filter_strategy import PruningContentFilter
 from crawl4ai.extraction_strategy import LLMExtractionStrategy
 from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
 from pydantic import BaseModel, Field

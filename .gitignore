@@ -3,3 +3,6 @@
 
 # node
 node_modules
+
+# fastapi
+__pycache__

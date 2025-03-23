@@ -1,12 +1,11 @@
 ---
 - name: Set up Job Scraper Service
   hosts: localhost
+  vars_files:
+    - shared_vars.yml
   vars:
     service_name: job-scraper
-    user: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_id }}"
     anthropic_api_key: "{{ lookup('community.general.onepassword', 'Anthropic API Key - jobs.devinl.im', field='credential', vault='Personal') }}"
-    project_root: "{{ playbook_dir | dirname }}"
     script_path: "{{ project_root }}/scraper/main.py"
 
   tasks:

@@ -29,3 +29,11 @@ Design choices:
 - Scraper first does a diff detect on page hash. If page has changed, it will use llm-scraper with local ollama to parse.
 - Ollama will be used to host SmolLM 1.7B.
 - SmolLM should let us scrape more reliably from any website without having to manually configure rules for each site.
+
+## TODO 
+
+- setup python requirements/env
+
+So far:
+- fastapi[standard]
+- crawl4ai

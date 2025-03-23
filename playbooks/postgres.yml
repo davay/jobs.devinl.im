@@ -1,0 +1,15 @@
+---
+- name: Setup PostreSQL 
+  hosts: localhost
+  vars_files:
+    - shared_vars.yml
+  tasks:
+    - name: Run Docker Compose
+      community.docker.docker_compose_v2:
+        project_src: "{{ project_root }}/db"
+        state: present
+      register: output
+
+    - name: Show Docker Compose output
+      debug:
+        var: output
