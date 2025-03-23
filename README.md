@@ -17,6 +17,7 @@ So I want to make a similar site except that users can set their own sites and k
 Next good-to-haves:
 - Location filter 
 - Browser notification
+- Team/Category filtering
 
 ## System Architecture
 
@@ -32,8 +33,7 @@ Design choices:
 
 ## TODO 
 
-- setup python requirements/env
-
-So far:
-- fastapi[standard]
-- crawl4ai
+- setup python requirements/env (so far: fastapi[standard], crawl4ai, sqlmodel, psycopg2-binary)
+- make fastapi a service
+- setup page hashing, useful for sites that dont show date, we can use date first seen on refresh
+- setup db models

@@ -3,10 +3,10 @@
 - Company: 
     - id | PK
     - name
-    - url 
+    - url
 
 - Job:
     - id | PK
-    - company_id | FK
+    - source_id | FK
     - title 
     - date 
