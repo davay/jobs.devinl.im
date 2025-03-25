@@ -4,5 +4,8 @@
 # node
 node_modules
 
-# fastapi
+# python
 __pycache__
+.venv
+
+

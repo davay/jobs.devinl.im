@@ -8,5 +8,5 @@ class Job(SQLModel, table=True):
     company_id: int | None = Field(
         default=None, foreign_key="company.id", ondelete="CASCADE"
     )
-    title: str
+    title: str = Field(index=True)
     date: datetime | None = None

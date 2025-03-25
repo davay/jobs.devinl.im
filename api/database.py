@@ -20,6 +20,7 @@ def get_engine():
 
 
 def seed_database(engine):
+    print("Seeding the database...")
     with Session(engine) as session:
         companies = [
             Company(

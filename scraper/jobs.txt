@@ -1,55 +1,54 @@
-{"title": "Software Development Engineer, AWS RDS", "date": "2025-03-22", "error": false}
-{"title": "Amazon Fresh Grocery Associate - Naperville, IL", "date": "2025-03-21", "error": false}
-{"title": "Amazon Fresh Grocery Associate - Fullerton, CA", "date": "2025-03-21", "error": false}
-{"title": "Staff Pharmacist, Amazon Pharmacy", "date": "2025-03-21", "error": false}
-{"title": "Front End Engineer, Project Kuiper", "date": "2025-03-21", "error": false}
-{"title": "Amazon Fresh Grocery Associate - Woodland Hills, CA", "date": "2025-03-21", "error": false}
-{"title": "Process Assistant, RSR", "date": "2025-03-21", "error": false}
-{"title": "Process Assistant, RSR", "date": "2025-03-21", "error": false}
-{"title": "Process Assistant, RSR", "date": "2025-03-21", "error": false}
-{"title": "Process Assistant, RSR", "date": "2025-03-22", "error": false}
-{"title": "Process Assistant, RSR", "date": "2025-03-22", "error": false}
-{"title": "Operations Manager - Castleton, NY", "date": "2025-03-22", "error": false}
-{"title": "Director, Microsoft Innovation Hub - Chicago, Illinois", "date": "2025-03-23", "error": false}
-{"title": "Azure Principal Technical Architect \u2013 Innovation Hub", "date": "2025-03-23", "error": false}
-{"title": "Principal Software Engineer", "date": "2025-03-22", "error": false}
-{"title": "Software Engineer II", "date": "2025-03-22", "error": false}
-{"title": "Principal Security PM Architect", "date": "2025-03-22", "error": false}
-{"title": "Senior Software Engineer", "date": "2025-03-22", "error": false}
-{"title": "Software Engineer", "date": "2025-03-22", "error": false}
-{"title": "Consulting Project Manager - CTJ - Top Secret", "date": "2025-03-22", "error": false}
-{"title": "Principal UX Researcher", "date": "2025-03-22", "error": false}
-{"title": "Principal Software Engineer", "date": "2025-03-22", "error": false}
-{"title": "Performance Digital Media Specialist", "date": "2025-03-22", "error": false}
-{"title": "Data Center Technician", "date": "2025-03-22", "error": false}
-{"title": "Customer and Partner Engagement Lead \u2013 Retail & Consumer Goods", "date": "2025-03-22", "error": false}
-{"title": "New Product Introduction (NPI) Program Manager", "date": "2025-03-22", "error": false}
-{"title": "Principal Product Manager", "date": "2025-03-22", "error": false}
-{"title": "Principal Software Engineer", "date": "2025-03-22", "error": false}
-{"title": "Senior Software Engineer", "date": "2025-03-22", "error": false}
-{"title": "Senior Software Engineer", "date": "2025-03-22", "error": false}
-{"title": "Data Center Technician Manager", "date": "2025-03-22", "error": false}
-{"title": "Senior Data and Applied Scientist", "date": "2025-03-22", "error": false}
-{"title": "Senior Engineering Manager, Summarization", "date": "N/A", "error": false}
-{"title": "US-Business Expert", "date": "2025-03-23", "error": false}
-{"title": "US-Business Pro", "date": "2025-03-23", "error": false}
-{"title": "US-Genius", "date": "2025-03-23", "error": false}
-{"title": "US-Creative", "date": "2025-03-23", "error": false}
-{"title": "US-Operations Expert", "date": "2025-03-23", "error": false}
-{"title": "US-Expert", "date": "2025-03-23", "error": false}
-{"title": "US-Technical Specialist", "date": "2025-03-23", "error": false}
-{"title": "US - Specialist: Full-Time, Part-Time, and Part-Time Temporary", "date": "2025-03-23", "error": false}
-{"title": "Realtime Engineer - AVConference Telephony Engineer", "date": "2025-03-22", "error": false}
-{"title": "Hardware Engineer - Power Analysis and Modeling", "date": "2025-03-21", "error": false}
-{"title": "Director of Business Management, Marketplace Platforms", "date": "2025-03-21", "error": false}
-{"title": "Hardware Engineer - Power Analysis and Modeling", "date": "2025-03-21", "error": false}
-{"title": "Director of Business Management, Marketplace Platforms", "date": "2025-03-21", "error": false}
-{"title": "Mac System EPM (Engineering Program Manager)", "date": "2025-03-21", "error": false}
-{"title": "Sensing HW & Data Collection Systems, Mechanical Engineer", "date": "2025-03-21", "error": false}
-{"title": "CoreOS Quality Engineer", "date": "2025-03-21", "error": false}
-{"title": "Cellular RF Control Architect", "date": "2025-03-21", "error": false}
-{"title": "GNSS Design Verification Engineer", "date": "2025-03-21", "error": false}
-{"title": "Junior Planner - Beats", "date": "2025-03-21", "error": false}
-{"title": "Wireless PHY Design Verification Engineer", "date": "2025-03-21", "error": false}
-{"title": "Senior iOS Software Embedded Engineer", "date": "2025-03-21", "error": false}
-{"title": "AIML - Senior Engineering Manager, Summarization", "date": "2025-03-21", "error": false}
+{"title": "Technical Infrastructure Program Manager, Infrastructure Capacity Management", "date": "2025-03-24", "error": false}
+{"title": "Sr Customer Success Mgr, Strategic Account Services", "date": "2025-03-24", "error": false}
+{"title": "Sr Software Development Engineer, AWS Open Data Analytics Engines", "date": "2025-03-24", "error": false}
+{"title": "Senior Software Development Engineer", "date": "2025-03-24", "error": false}
+{"title": "Senior Technical Infrastructure Program Manager, Infrastructure Capacity Management", "date": "2025-03-24", "error": false}
+{"title": "Software Development Engineer", "date": "2025-03-25", "error": false}
+{"title": "Co-Sell Initiatives Manager", "date": "2025-03-25", "error": false}
+{"title": "System Dev Engineer, Kuiper Satellite Release management", "date": "2025-03-25", "error": false}
+{"title": "Sr. SDE, Mftg Automation, MDE Automation Team", "date": "2025-03-25", "error": false}
+{"title": "Senior Automation Engineer - Oxnard, CA, ARS-OXR1-RME", "date": "2025-03-24", "error": false}
+{"title": "Technical Infrastructure Program Manager, Infrastructure Capacity Management", "date": "2025-03-25", "error": false}
+{"title": "Sr Customer Success Mgr, Strategic Account Services", "date": "2025-03-24", "error": false}
+{"title": "Senior Security Software Engineer", "date": "2025-03-24", "error": false}
+{"title": "Senior Software Engineer", "date": "2025-03-24", "error": false}
+{"title": "Launch Manager", "date": "2025-03-24", "error": false}
+{"title": "Senior Producer - Franchise Creative & Design - Minecraft", "date": "2025-03-24", "error": false}
+{"title": "Digital Account Manager", "date": "2025-03-24", "error": false}
+{"title": "Senior Technical Program Manager, Minecraft", "date": "2025-03-24", "error": false}
+{"title": "Software Engineer", "date": "2025-03-24", "error": false}
+{"title": "Customer Business Outcomes Specialist", "date": "2025-03-24", "error": false}
+{"title": "Data Center Inventory & Asset Technician (DIAT)", "date": "2025-03-24", "error": false}
+{"title": "Sales Leader, Federal Delivery - CTJ - Top Secret", "date": "2025-03-24", "error": false}
+{"title": "Senior Software Engineer", "date": "2025-03-24", "error": false}
+{"title": "Senior Manager, E+D Strategy", "date": "2025-03-24", "error": false}
+{"title": "Solution Area Sales Specialist", "date": "2025-03-24", "error": false}
+{"title": "Principal Software Engineer", "date": "2025-03-24", "error": false}
+{"title": "Data Center Critical Environment Technician Manager (Night Shift)", "date": "2025-03-24", "error": false}
+{"title": "Director, E+D Strategy", "date": "2025-03-24", "error": false}
+{"title": "Principal Software Engineer", "date": "2025-03-24", "error": false}
+{"title": "Software Engineer II", "date": "2025-03-24", "error": false}
+{"title": "Critical Environment Technician", "date": "2025-03-24", "error": false}
+{"title": "Principal Security Research Manager", "date": "2025-03-24", "error": false}
+{"title": "ASO Readiness Program Manager", "date": "N/A", "error": false}
+{"title": "US-Business Expert", "date": "2025-03-24", "error": false}
+{"title": "US-Business Pro", "date": "2025-03-24", "error": false}
+{"title": "US-Genius", "date": "2025-03-24", "error": false}
+{"title": "US-Creative", "date": "2025-03-24", "error": false}
+{"title": "US-Operations Expert", "date": "2025-03-24", "error": false}
+{"title": "US-Expert", "date": "2025-03-24", "error": false}
+{"title": "US-Technical Specialist", "date": "2025-03-24", "error": false}
+{"title": "US - Specialist: Full-Time, Part-Time, and Part-Time Temporary", "date": "2025-03-24", "error": false}
+{"title": "Thermal Device Product Design Engineer", "date": "2025-03-24", "error": false}
+{"title": "Thermal Device Product Design Engineer - Mechanical", "date": "2025-03-24", "error": false}
+{"title": "Thermal Device Product Design Engineer - Mechanical", "date": "2025-03-24", "error": false}
+{"title": "Firmware & Sensing Engineering Lead, Home and Audio", "date": "2025-03-24", "error": false}
+{"title": "Technical Program Manager, Camera Components", "date": "2025-03-24", "error": false}
+{"title": "Lead Producer, Interactive", "date": "2025-03-24", "error": false}
+{"title": "Technical Product Manager - Partner Onboarding and Business", "date": "2025-03-24", "error": false}
+{"title": "Associate Producer, Live Show", "date": "2025-03-24", "error": false}
+{"title": "Events Coordinator", "date": "2025-03-24", "error": false}
+{"title": "Model Robustness Applied Researcher - SIML, ISE", "date": "2025-03-24", "error": false}
+{"title": "System Signal Integrity Engineer", "date": "2025-03-24", "error": false}
+{"title": "Sales Manager, Retail Business", "date": "2025-03-24", "error": false}
+{"title": "ASO Readiness Program Manager", "date": "2025-03-24", "error": false}
