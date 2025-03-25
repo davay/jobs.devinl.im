@@ -1,6 +1,6 @@
 from sqlmodel import Session, SQLModel, create_engine, inspect
 
-from .models import Category, Company, Job
+from models import Category, Company, Job
 
 DATABASE_URL = "postgresql://postgres:example@localhost:5432/postgres"
 engine = create_engine(DATABASE_URL)

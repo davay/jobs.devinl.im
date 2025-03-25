@@ -1,55 +1,56 @@
-{"title": "Technical Infrastructure Program Manager, Infrastructure Capacity Management", "date": "N/A", "error": false}
-{"title": "Sr Customer Success Mgr, Strategic Account Services", "date": "2025-03-24", "error": false}
-{"title": "Senior Applied Scientist, ShipTech Analytics", "date": "2025-03-25", "error": false}
-{"title": "Sr Software Development Engineer, AWS Open Data Analytics Engines", "date": "2025-03-24", "error": false}
-{"title": "Senior Software Development Engineer", "date": "2025-03-24", "error": false}
-{"title": "Software Development Engineer", "date": "2025-03-25", "error": false}
-{"title": "Co-Sell Initiatives Manager", "date": "2025-03-25", "error": false}
-{"title": "System Dev Engineer, Kuiper Satellite Release management", "date": "2025-03-25", "error": false}
-{"title": "Sr. SDE, Mftg Automation, MDE Automation Team", "date": "2025-03-25", "error": false}
-{"title": "Senior Automation Engineer - Oxnard, CA, ARS-OXR1-RME", "date": "2025-03-24", "error": false}
-{"title": "Technical Infrastructure Program Manager, Infrastructure Capacity Management", "date": "2025-03-25", "error": false}
-{"title": "Sr Customer Success Mgr, Strategic Account Services", "date": "2025-03-24", "error": false}
-{"title": "Senior Applied Scientist, ShipTech Analytics", "date": "N/A", "error": false}
-{"title": "Senior Security Software Engineer", "date": "2025-03-25", "error": false}
-{"title": "Senior Software Engineer", "date": "2025-03-25", "error": false}
-{"title": "Launch Manager", "date": "2025-03-25", "error": false}
-{"title": "Senior Producer - Franchise Creative & Design - Minecraft", "date": "2025-03-25", "error": false}
-{"title": "Digital Account Manager", "date": "2025-03-25", "error": false}
-{"title": "Senior Technical Program Manager, Minecraft", "date": "2025-03-25", "error": false}
-{"title": "Software Engineer", "date": "2025-03-25", "error": false}
-{"title": "Customer Business Outcomes Specialist", "date": "2025-03-25", "error": false}
-{"title": "Data Center Inventory & Asset Technician (DIAT)", "date": "2025-03-25", "error": false}
-{"title": "Sales Leader, Federal Delivery - CTJ - Top Secret", "date": "2025-03-25", "error": false}
-{"title": "Senior Software Engineer", "date": "2025-03-25", "error": false}
-{"title": "Senior Manager, E+D Strategy", "date": "2025-03-25", "error": false}
-{"title": "Solution Area Sales Specialist", "date": "2025-03-25", "error": false}
-{"title": "Principal Software Engineer", "date": "2025-03-25", "error": false}
-{"title": "Data Center Critical Environment Technician Manager (Night Shift)", "date": "2025-03-25", "error": false}
-{"title": "Director, E+D Strategy", "date": "2025-03-25", "error": false}
-{"title": "Principal Software Engineer", "date": "2025-03-25", "error": false}
-{"title": "Software Engineer II", "date": "2025-03-25", "error": false}
-{"title": "Critical Environment Technician", "date": "2025-03-25", "error": false}
-{"title": "Principal Security Research Manager", "date": "2025-03-25", "error": false}
-{"title": "ASO Readiness Program Manager", "date": "N/A", "error": false}
-{"title": "US-Business Expert", "date": "2025-03-25", "error": false}
-{"title": "US-Business Pro", "date": "2025-03-25", "error": false}
-{"title": "US-Genius", "date": "2025-03-25", "error": false}
-{"title": "US-Creative", "date": "2025-03-25", "error": false}
-{"title": "US-Operations Expert", "date": "2025-03-25", "error": false}
-{"title": "US-Expert", "date": "2025-03-25", "error": false}
-{"title": "US-Technical Specialist", "date": "2025-03-25", "error": false}
-{"title": "US - Specialist: Full-Time, Part-Time, and Part-Time Temporary", "date": "2025-03-25", "error": false}
-{"title": "Thermal Device Product Design Engineer", "date": "2025-03-24", "error": false}
-{"title": "Thermal Device Product Design Engineer - Mechanical", "date": "2025-03-24", "error": false}
-{"title": "Thermal Device Product Design Engineer - Mechanical", "date": "2025-03-24", "error": false}
-{"title": "Firmware & Sensing Engineering Lead, Home and Audio", "date": "2025-03-24", "error": false}
-{"title": "Technical Program Manager, Camera Components", "date": "2025-03-24", "error": false}
-{"title": "Lead Producer, Interactive", "date": "2025-03-24", "error": false}
-{"title": "Technical Product Manager - Partner Onboarding and Business", "date": "2025-03-24", "error": false}
-{"title": "Associate Producer, Live Show", "date": "2025-03-24", "error": false}
-{"title": "Events Coordinator", "date": "2025-03-24", "error": false}
-{"title": "Model Robustness Applied Researcher - SIML, ISE", "date": "2025-03-24", "error": false}
-{"title": "System Signal Integrity Engineer", "date": "2025-03-24", "error": false}
-{"title": "Sales Manager, Retail Business", "date": "2025-03-24", "error": false}
-{"title": "ASO Readiness Program Manager", "date": "2025-03-24", "error": false}
+{"title": "Sr SDE, MFTG Automation MDE Automation Team", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Account Manager, GenAI Startup Team", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Principal Worldwide Specialist - GenAI, Data Strategy for AI", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Senior Automation Engineer - Oxnard, CA, ARS-OXR1-RME", "date": "2025-03-24", "error": false, "company": "Amazon"}
+{"title": "Sr. GenAI GTM Tech BD, Startup Team", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Principal GenAI GTM Tech BD, Startup Team", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Area Manager - (Military Veterans Encouraged to Apply)", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Software Development Engineer", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Co-Sell Initiatives Manager", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "System Dev Engineer, Kuiper Satellite Release management", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Sr. SDE, Mftg Automation, MDE Automation Team", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Account Manager, GenAI Startup Team", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Principal Worldwide Specialist - GenAI, Data Strategy for AI", "date": "2025-03-25", "error": false, "company": "Amazon"}
+{"title": "Senior Security Software Engineer", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Senior Software Engineer", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Launch Manager", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Senior Producer - Franchise Creative & Design - Minecraft", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Digital Account Manager", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Senior Technical Program Manager, Minecraft", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Software Engineer", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Customer Business Outcomes Specialist", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Data Center Inventory & Asset Technician (DIAT)", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Sales Leader, Federal Delivery - CTJ - Top Secret", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Senior Software Engineer", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Senior Manager, E+D Strategy", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Solution Area Sales Specialist", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Principal Software Engineer", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Data Center Critical Environment Technician Manager (Night Shift)", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Director, E+D Strategy", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Principal Software Engineer", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Software Engineer II", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Critical Environment Technician", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Principal Security Research Manager", "date": "2025-03-25", "error": false, "company": "Microsoft"}
+{"title": "Compiler Circuit Designer", "date": "N/A", "error": false, "company": "Apple"}
+{"title": "Standard Cell Design Methodology & Flow Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "SRAM Circuit Design Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "Circuit Design Lead", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "Digital Layout Design Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "SRAM Circuit Design Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "SRAM Circuit Design Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "Custom Timing Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "Custom Timing Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "Digital Layout Design Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "Custom Circuits Design Verification Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "Compiler Circuit Designer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "US-Business Expert", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "US-Business Pro", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "US-Genius", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "US-Creative", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "US-Operations Expert", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "US-Expert", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "US-Technical Specialist", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "US - Specialist: Full-Time, Part-Time, and Part-Time Temporary", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "PMU Hardware Electrical Design Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "Standard Cell Design Methodology & Flow Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}
+{"title": "SRAM Circuit Design Engineer", "date": "2025-03-25", "error": false, "company": "Apple"}

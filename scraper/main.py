@@ -2,6 +2,7 @@ import asyncio
 import json
 import os
 from datetime import datetime, timedelta
+from typing import List
 
 import requests
 from crawl4ai import (
@@ -23,12 +24,12 @@ class Job(BaseModel):
 
 
 async def main():
-    api_url = "http://localhost:8000"
+    api_url = "http://0.0.0.0:8000"
     today = datetime.now().date()
 
-    pruning_filter = PruningContentFilter()
+    pruning_filter = PruningContentFilter()  # type: ignore
     md_generator = DefaultMarkdownGenerator(content_filter=pruning_filter)
-    crawler_config = CrawlerRunConfig(
+    crawler_config = CrawlerRunConfig(  # type: ignore
         markdown_generator=md_generator,
         delay_before_return_html=5,
         word_count_threshold=1,
@@ -36,7 +37,7 @@ async def main():
         cache_mode=CacheMode.BYPASS,
         only_text=True,
         exclude_social_media_links=True,
-        extraction_strategy=LLMExtractionStrategy(
+        extraction_strategy=LLMExtractionStrategy(  # type: ignore
             schema=Job.model_json_schema(),
             extraction_type="schema",
             input_format="fit_markdown",
@@ -56,24 +57,26 @@ async def main():
         ),
     )
 
-    sources = requests.get(f"{api_url}/get_sources")
+    sources = requests.get(f"{api_url}/get_sources").json()
     print(sources)
 
-    # browser_config = BrowserConfig(browser_type="firefox", headless=True, verbose=True)
-    # async with AsyncWebCrawler(config=browser_config) as crawler:
-    #     jobs = []
-    #     for source in sources:
-    #         result = await crawler.arun(
-    #             url=source["url"],
-    #             config=crawler_config,
-    #         )
-    #
-    #         jobs.extend(json.loads(result.extracted_content))
-    #
-    #     for job in jobs:
-    #
-    #     with open("jobs.txt", "w") as file:
-    #         file.write("\n".join([json.dumps(job) for job in jobs]))
+    browser_config = BrowserConfig(browser_type="firefox", headless=True, verbose=True)  # type: ignore
+    async with AsyncWebCrawler(config=browser_config) as crawler:  # type: ignore
+        jobs = []
+        for source in sources:
+            result = await crawler.arun(
+                url=source["url"],
+                config=crawler_config,
+            )
+
+            temp_jobs: List(dict) = json.loads(result.extracted_content)  # type: ignore
+
+            for job in temp_jobs:
+                job["company"] = source["company"]
+            jobs.extend(temp_jobs)  # type: ignore
+
+        with open("jobs.txt", "w") as file:
+            file.write("\n".join([json.dumps(job) for job in jobs]))
 
 
 if __name__ == "__main__":
