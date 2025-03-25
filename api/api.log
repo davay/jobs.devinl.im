@@ -3,6 +3,7 @@
  
              Searching for package file structure from directories with 
              __init__.py files
+Creating missing tables: ['category']
 Resetting the database...
 Seeding the database...
              Importing from /home/davay/Repos/jobs.devinl.im/api
@@ -21,7 +22,15 @@ Seeding the database...
  
              Logs:
  
-      INFO   Started server process [29790]
+      INFO   Started server process [31680]
       INFO   Waiting for application startup.
       INFO   Application startup complete.
-      INFO   Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+     ERROR   [Errno 98] error while a   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+      INFO   192.168.134.175:55860 - "GET / HTTP/1.1" 200
