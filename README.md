@@ -36,7 +36,9 @@ Then start the services
 ./start_scraper.sh
 ```
 
-Note: Ollama is currently not being used, since using smaller local models results in bad parsing. 
+NOTE 1: Ollama is currently not being used, since using smaller local models results in bad parsing. 
+
+NOTE 2: 1Password is used in playbooks/scraper.yml to fetch Anthropic API Key 
 
 ## Design
 
@@ -61,7 +63,7 @@ Design choices:
 
 ## TODO 
 
-- setup python requirements/env (so far: fastapi[standard], crawl4ai, sqlmodel, psycopg2-binary)
+- setup db models
 - make fastapi a service
 - setup page hashing, useful for sites that dont show date, we can use date first seen on refresh
-- setup db models
+- Fix docs to mention crawl4ai instead of llm-scraper
