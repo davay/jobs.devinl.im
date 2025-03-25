@@ -4,6 +4,7 @@ from sqlmodel import Field, Relationship, SQLModel
 
 if TYPE_CHECKING:
     from company import Company
+    from job import Job
 
 
 class Category(SQLModel, table=True):
@@ -15,3 +16,4 @@ class Category(SQLModel, table=True):
     name: str = Field(index=True)
     url: str
     company: Optional["Company"] = Relationship(back_populates="categories")
+    jobs: list["Job"] = Relationship(back_populates="category")

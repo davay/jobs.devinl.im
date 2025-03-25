@@ -1,6 +1,10 @@
 from datetime import datetime
+from typing import TYPE_CHECKING, Optional
 
-from sqlmodel import Field, SQLModel
+from sqlmodel import Field, Relationship, SQLModel
+
+if TYPE_CHECKING:
+    from category import Category
 
 
 class Job(SQLModel, table=True):
@@ -10,4 +14,5 @@ class Job(SQLModel, table=True):
         default=None, foreign_key="category.id", ondelete="CASCADE"
     )
     title: str = Field(index=True)
-    date: datetime | None = None
+    date: str | None = None
+    category: Optional["Category"] = Relationship(back_populates="jobs")

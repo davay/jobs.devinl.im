@@ -25,6 +25,8 @@ class Job(BaseModel):
 
 async def main():
     api_url = "http://0.0.0.0:8000"
+    get_sources_url = f"{api_url}/get_sources"
+    submit_jobs_url = f"{api_url}/submit_jobs"
     today = datetime.now().date()
 
     pruning_filter = PruningContentFilter()  # type: ignore
@@ -57,8 +59,8 @@ async def main():
         ),
     )
 
-    sources = requests.get(f"{api_url}/get_sources").json()
-    print(sources)
+    get_sources_response = requests.get(get_sources_url)
+    sources = get_sources_response.json()
 
     browser_config = BrowserConfig(browser_type="firefox", headless=True, verbose=True)  # type: ignore
     async with AsyncWebCrawler(config=browser_config) as crawler:  # type: ignore
@@ -69,14 +71,16 @@ async def main():
                 config=crawler_config,
             )
 
-            temp_jobs: List(dict) = json.loads(result.extracted_content)  # type: ignore
+            contents: List(dict) = json.loads(result.extracted_content)  # type: ignore
+            for content in contents:
+                job = {}
+                job["title"] = content["title"]
+                job["category_id"] = int(source["category_id"])
+                job["date"] = content["date"]
+                jobs.append(job)
 
-            for job in temp_jobs:
-                job["company"] = source["company"]
-            jobs.extend(temp_jobs)  # type: ignore
-
-        with open("jobs.txt", "w") as file:
-            file.write("\n".join([json.dumps(job) for job in jobs]))
+        submit_jobs_response = requests.post(url=submit_jobs_url, json=jobs)
+        print(submit_jobs_response.json())
 
 
 if __name__ == "__main__":

@@ -21,33 +21,12 @@ Seeding the database...
  
              Logs:
  
-      INFO   Started server process [7987]
+      INFO   Started server process [11950]
       INFO   Waiting for application startup.
       INFO   Application startup complete.
       INFO   Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-      INFO   192.168.134.175:55952 - "GET / HTTP/1.1" 404
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-      INFO   192.168.134.175:55952 - "GET / HTTP/1.1" 404
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-      INFO   192.168.134.175:55952 - "GET /docs HTTP/1.1" 200
-      INFO   192.168.134.175:55952 - "GET /openapi.json HTTP/1.1" 200
-      INFO   192.168.134.175:55952 - "GET /get_sources HTTP/1.1" 200
-      INFO   192.168.134.175:55965 - "GET /docs HTTP/1.1" 200
-      INFO   192.168.134.175:55965 - "GET /openapi.json HTTP/1.1" 200
-      INFO   127.0.0.1:34350 - "GET /get_sources HTTP/1.1" 200
-      INFO   127.0.0.1:33094 - "GET /get_sources HTTP/1.1" 200
-      INFO   127.0.0.1:41212 - "GET /get_sources HTTP/1.1" 200
-      INFO   127.0.0.1:57684 - "GET /get_sources HTTP/1.1" 200
-      INFO   127.0.0.1:47162 - "GET /get_sources HTTP/1.1" 200
-      INFO   127.0.0.1:36156 - "GET /get_sources HTTP/1.1" 200
-      INFO   127.0.0.1:37558 - "GET /get_sources HTTP/1.1" 200
+      INFO   127.0.0.1:47760 - "GET /get_sources HTTP/1.1" 200
+      INFO   127.0.0.1:60854 - "POST /submit_jobs HTTP/1.1" 200
+      INFO   192.168.134.175:56075 - "GET /get_jobs HTTP/1.1" 200
+      INFO   192.168.134.175:56081 - "GET /get_jobs HTTP/1.1" 200
+      INFO   192.168.134.175:56082 - "GET /get_sources HTTP/1.1" 200
