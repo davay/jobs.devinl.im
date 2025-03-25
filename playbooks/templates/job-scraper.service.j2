@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=python3 {{ script_path }}
+ExecStart=uv run python {{ script_path }}
 WorkingDirectory={{ project_root }}/scraper
 User={{ user }}
 Group={{ group }}

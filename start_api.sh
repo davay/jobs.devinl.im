@@ -1,6 +1,6 @@
 #!/bin/bash
 
 cd api
-nohup fastapi run --host 0.0.0.0 main.py > api.log 2>&1 &
+nohup uv fastapi run --host 0.0.0.0 main.py > api.log 2>&1 &
 echo $! > api.pid
 echo "FastAPI server running with PID $(cat api.pid). Log at api.log."
