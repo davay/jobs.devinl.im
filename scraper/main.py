@@ -3,6 +3,7 @@ import json
 import os
 from datetime import datetime, timedelta
 
+import requests
 from crawl4ai import (
     AsyncWebCrawler,
     BrowserConfig,
@@ -16,12 +17,13 @@ from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
 from pydantic import BaseModel, Field
 
 
-class Posting(BaseModel):
+class Job(BaseModel):
     title: str = Field(..., description="Job title")
     date: str = Field(..., description="Job posting date or last updated date")
 
 
 async def main():
+    api_url = "http://localhost:8000"
     today = datetime.now().date()
 
     pruning_filter = PruningContentFilter()
@@ -35,7 +37,7 @@ async def main():
         only_text=True,
         exclude_social_media_links=True,
         extraction_strategy=LLMExtractionStrategy(
-            schema=Posting.model_json_schema(),
+            schema=Job.model_json_schema(),
             extraction_type="schema",
             input_format="fit_markdown",
             llm_config=LLMConfig(
@@ -54,32 +56,24 @@ async def main():
         ),
     )
 
-    companies = [
-        {
-            "name": "Amazon",
-            "url": "https://www.amazon.jobs/en/search?offset=0&result_limit=10&sort=recent&country%5B%5D=USA",
-        },
-        {
-            "name": "Microsoft",
-            "url": "https://jobs.careers.microsoft.com/global/en/search?lc=United%20States&l=en_us&pg=1&pgSz=20&o=Relevance&flt=true&ulcs=true&cc=United%20States&ref=cms",
-        },
-        {
-            "name": "Apple",
-            "url": "https://jobs.apple.com/en-us/search?location=united-states-USA",
-        },
-    ]
-    browser_config = BrowserConfig(browser_type="firefox", headless=True, verbose=True)
-    async with AsyncWebCrawler(config=browser_config) as crawler:
-        jobs = []
-        for company in companies:
-            result = await crawler.arun(
-                url=company["url"],
-                config=crawler_config,
-            )
+    sources = requests.get(f"{api_url}/get_sources")
+    print(sources)
 
-            jobs.extend(json.loads(result.extracted_content))
-        with open("jobs.txt", "w") as file:
-            file.write("\n".join([json.dumps(job) for job in jobs]))
+    # browser_config = BrowserConfig(browser_type="firefox", headless=True, verbose=True)
+    # async with AsyncWebCrawler(config=browser_config) as crawler:
+    #     jobs = []
+    #     for source in sources:
+    #         result = await crawler.arun(
+    #             url=source["url"],
+    #             config=crawler_config,
+    #         )
+    #
+    #         jobs.extend(json.loads(result.extracted_content))
+    #
+    #     for job in jobs:
+    #
+    #     with open("jobs.txt", "w") as file:
+    #         file.write("\n".join([json.dumps(job) for job in jobs]))
 
 
 if __name__ == "__main__":

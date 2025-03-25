@@ -3,34 +3,218 @@
  
              Searching for package file structure from directories with 
              __init__.py files
-Creating missing tables: ['category']
-Resetting the database...
-Seeding the database...
-             Importing from /home/davay/Repos/jobs.devinl.im/api
- 
-    module   🐍 main.py
- 
-      code   Importing the FastAPI app object from the module with the following
-             code:
- 
-             from main import app
- 
-       app   Using import string: main:app
- 
-    server   Server started at http://0.0.0.0:8000
-    server   Documentation at http://0.0.0.0:8000/docs
- 
-             Logs:
- 
-      INFO   Started server process [31680]
-      INFO   Waiting for application startup.
-      INFO   Application startup complete.
-     ERROR   [Errno 98] error while a   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-   WARNING   Invalid HTTP request received.
-      INFO   192.168.134.175:55860 - "GET / HTTP/1.1" 200
+ERROR    Import error: attempted relative import with no known parent package   
+WARNING  Ensure all the package directories have an __init__.py file            
+
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/davay/Repos/jobs.devinl.im/api/.venv/lib/python3.11/site-packages/fast │
+│ api_cli/cli.py:334 in run                                                    │
+│                                                                              │
+│   331 │                                                                      │
+│   332 │   Otherwise, it uses the first [bold]FastAPI[/bold] app found in the │
+│   333 │   """                                                                │
+│ ❱ 334 │   _run(                                                              │
+│   335 │   │   path=path,                                                     │
+│   336 │   │   host=host,                                                     │
+│   337 │   │   port=port,                                                     │
+│                                                                              │
+│ ╭─────────────── locals ───────────────╮                                     │
+│ │           app = None                 │                                     │
+│ │          host = '0.0.0.0'            │                                     │
+│ │          path = PosixPath('main.py') │                                     │
+│ │          port = 8000                 │                                     │
+│ │ proxy_headers = True                 │                                     │
+│ │        reload = False                │                                     │
+│ │     root_path = ''                   │                                     │
+│ │       workers = None                 │                                     │
+│ ╰──────────────────────────────────────╯                                     │
+│                                                                              │
+│ /home/davay/Repos/jobs.devinl.im/api/.venv/lib/python3.11/site-packages/fast │
+│ api_cli/cli.py:101 in _run                                                   │
+│                                                                              │
+│    98 │   │   )                                                              │
+│    99 │   │                                                                  │
+│   100 │   │   try:                                                           │
+│ ❱ 101 │   │   │   import_data = get_import_data(path=path, app_name=app)     │
+│   102 │   │   except FastAPICLIException as e:                               │
+│   103 │   │   │   toolkit.print_line()                                       │
+│   104 │   │   │   toolkit.print(f"[error]{e}")                               │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │           app = None                                                     │ │
+│ │       command = 'run'                                                    │ │
+│ │          host = '0.0.0.0'                                                │ │
+│ │          path = PosixPath('main.py')                                     │ │
+│ │          port = 8000                                                     │ │
+│ │ proxy_headers = True                                                     │ │
+│ │        reload = False                                                    │ │
+│ │     root_path = ''                                                       │ │
+│ │   server_type = 'production'                                             │ │
+│ │       toolkit = <rich_toolkit.toolkit.RichToolkit object at              │ │
+│ │                 0x75d140607e10>                                          │ │
+│ │       workers = None                                                     │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/davay/Repos/jobs.devinl.im/api/.venv/lib/python3.11/site-packages/fast │
+│ api_cli/discover.py:126 in get_import_data                                   │
+│                                                                              │
+│   123 │   │   raise FastAPICLIException(f"Path does not exist {path}")       │
+│   124 │   mod_data = get_module_data_from_path(path)                         │
+│   125 │   sys.path.insert(0, str(mod_data.extra_sys_path))                   │
+│ ❱ 126 │   use_app_name = get_app_name(mod_data=mod_data, app_name=app_name)  │
+│   127 │                                                                      │
+│   128 │   import_string = f"{mod_data.module_import_str}:{use_app_name}"     │
+│   129                                                                        │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ app_name = None                                                          │ │
+│ │ mod_data = ModuleData(                                                   │ │
+│ │            │   module_import_str='main',                                 │ │
+│ │            │                                                             │ │
+│ │            extra_sys_path=PosixPath('/home/davay/Repos/jobs.devinl.im/a… │ │
+│ │            │   module_paths=[                                            │ │
+│ │            │   │                                                         │ │
+│ │            PosixPath('/home/davay/Repos/jobs.devinl.im/api/main.py')     │ │
+│ │            │   ]                                                         │ │
+│ │            )                                                             │ │
+│ │     path = PosixPath('main.py')                                          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/davay/Repos/jobs.devinl.im/api/.venv/lib/python3.11/site-packages/fast │
+│ api_cli/discover.py:70 in get_app_name                                       │
+│                                                                              │
+│    67                                                                        │
+│    68 def get_app_name(*, mod_data: ModuleData, app_name: Union[str, None] = │
+│    69 │   try:                                                               │
+│ ❱  70 │   │   mod = importlib.import_module(mod_data.module_import_str)      │
+│    71 │   except (ImportError, ValueError) as e:                             │
+│    72 │   │   logger.error(f"Import error: {e}")                             │
+│    73 │   │   logger.warning(                                                │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ app_name = None                                                          │ │
+│ │ mod_data = ModuleData(                                                   │ │
+│ │            │   module_import_str='main',                                 │ │
+│ │            │                                                             │ │
+│ │            extra_sys_path=PosixPath('/home/davay/Repos/jobs.devinl.im/a… │ │
+│ │            │   module_paths=[                                            │ │
+│ │            │   │                                                         │ │
+│ │            PosixPath('/home/davay/Repos/jobs.devinl.im/api/main.py')     │ │
+│ │            │   ]                                                         │ │
+│ │            )                                                             │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/davay/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/pyth │
+│ on3.11/importlib/__init__.py:126 in import_module                            │
+│                                                                              │
+│   123 │   │   │   if character != '.':                                       │
+│   124 │   │   │   │   break                                                  │
+│   125 │   │   │   level += 1                                                 │
+│ ❱ 126 │   return _bootstrap._gcd_import(name[level:], package, level)        │
+│   127                                                                        │
+│   128                                                                        │
+│   129 _RELOADING = {}                                                        │
+│                                                                              │
+│ ╭───── locals ─────╮                                                         │
+│ │   level = 0      │                                                         │
+│ │    name = 'main' │                                                         │
+│ │ package = None   │                                                         │
+│ ╰──────────────────╯                                                         │
+│ in _gcd_import:1204                                                          │
+│ ╭───── locals ─────╮                                                         │
+│ │   level = 0      │                                                         │
+│ │    name = 'main' │                                                         │
+│ │ package = None   │                                                         │
+│ ╰──────────────────╯                                                         │
+│ in _find_and_load:1176                                                       │
+│ ╭────────────────── locals ──────────────────╮                               │
+│ │ module = <object object at 0x75d14feac050> │                               │
+│ │   name = 'main'                            │                               │
+│ ╰────────────────────────────────────────────╯                               │
+│ in _find_and_load_unlocked:1147                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │        name = 'main'                                                     │ │
+│ │      parent = ''                                                         │ │
+│ │ parent_spec = None                                                       │ │
+│ │        path = None                                                       │ │
+│ │        spec = ModuleSpec(name='main',                                    │ │
+│ │               loader=<_frozen_importlib_external.SourceFileLoader object │ │
+│ │               at 0x75d140611a90>,                                        │ │
+│ │               origin='/home/davay/Repos/jobs.devinl.im/api/main.py')     │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ in _load_unlocked:690                                                        │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ module = <module 'main' from                                             │ │
+│ │          '/home/davay/Repos/jobs.devinl.im/api/main.py'>                 │ │
+│ │   spec = ModuleSpec(name='main',                                         │ │
+│ │          loader=<_frozen_importlib_external.SourceFileLoader object at   │ │
+│ │          0x75d140611a90>,                                                │ │
+│ │          origin='/home/davay/Repos/jobs.devinl.im/api/main.py')          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ in exec_module:940                                                           │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │   code = <code object <module> at 0x5b58afd72d70, file                   │ │
+│ │          "/home/davay/Repos/jobs.devinl.im/api/main.py", line 1>         │ │
+│ │ module = <module 'main' from                                             │ │
+│ │          '/home/davay/Repos/jobs.devinl.im/api/main.py'>                 │ │
+│ │   self = <_frozen_importlib_external.SourceFileLoader object at          │ │
+│ │          0x75d140611a90>                                                 │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│ in _call_with_frames_removed:241                                             │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │ args = (                                                                 │ │
+│ │        │   <code object <module> at 0x5b58afd72d70, file                 │ │
+│ │        "/home/davay/Repos/jobs.devinl.im/api/main.py", line 1>,          │ │
+│ │        │   {                                                             │ │
+│ │        │   │   '__name__': 'main',                                       │ │
+│ │        │   │   '__doc__': None,                                          │ │
+│ │        │   │   '__package__': '',                                        │ │
+│ │        │   │   '__loader__':                                             │ │
+│ │        <_frozen_importlib_external.SourceFileLoader object at            │ │
+│ │        0x75d140611a90>,                                                  │ │
+│ │        │   │   '__spec__': ModuleSpec(name='main',                       │ │
+│ │        loader=<_frozen_importlib_external.SourceFileLoader object at     │ │
+│ │        0x75d140611a90>,                                                  │ │
+│ │        origin='/home/davay/Repos/jobs.devinl.im/api/main.py'),           │ │
+│ │        │   │   '__file__':                                               │ │
+│ │        '/home/davay/Repos/jobs.devinl.im/api/main.py',                   │ │
+│ │        │   │   '__cached__':                                             │ │
+│ │        '/home/davay/Repos/jobs.devinl.im/api/__pycache__/main.cpython-3… │ │
+│ │        │   │   '__builtins__': {                                         │ │
+│ │        │   │   │   '__name__': 'builtins',                               │ │
+│ │        │   │   │   '__doc__': 'Built-in functions, types, exceptions,    │ │
+│ │        and other objects.\n\nThis module provides '+346,                 │ │
+│ │        │   │   │   '__package__': '',                                    │ │
+│ │        │   │   │   '__loader__': <class                                  │ │
+│ │        '_frozen_importlib.BuiltinImporter'>,                             │ │
+│ │        │   │   │   '__spec__': ModuleSpec(name='builtins', loader=<class │ │
+│ │        '_frozen_importlib.BuiltinImporter'>, origin='built-in'),         │ │
+│ │        │   │   │   '__build_class__': <built-in function                 │ │
+│ │        __build_class__>,                                                 │ │
+│ │        │   │   │   '__import__': <built-in function __import__>,         │ │
+│ │        │   │   │   'abs': <built-in function abs>,                       │ │
+│ │        │   │   │   'all': <built-in function all>,                       │ │
+│ │        │   │   │   'any': <built-in function any>,                       │ │
+│ │        │   │   │   ... +147                                              │ │
+│ │        │   │   },                                                        │ │
+│ │        │   │   'FastAPI': <class 'fastapi.applications.FastAPI'>,        │ │
+│ │        │   │   'HTTPException': <class                                   │ │
+│ │        'fastapi.exceptions.HTTPException'>,                              │ │
+│ │        │   │   ... +3                                                    │ │
+│ │        │   }                                                             │ │
+│ │        )                                                                 │ │
+│ │    f = <built-in function exec>                                          │ │
+│ │ kwds = {}                                                                │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /home/davay/Repos/jobs.devinl.im/api/main.py:5 in <module>                   │
+│                                                                              │
+│    2 from fastapi.middleware.cors import CORSMiddleware                      │
+│    3 from sqlmodel import Session, select                                    │
+│    4                                                                         │
+│ ❱  5 from .database import get_engine, reset_database, seed_database         │
+│    6 from .models import Category                                            │
+│    7 from .routes import categories                                          │
+│    8                                                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ImportError: attempted relative import with no known parent package

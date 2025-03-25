@@ -1,4 +1,9 @@
-from sqlmodel import Field, SQLModel
+from typing import TYPE_CHECKING, Optional
+
+from sqlmodel import Field, Relationship, SQLModel
+
+if TYPE_CHECKING:
+    from company import Company
 
 
 class Category(SQLModel, table=True):
@@ -9,3 +14,4 @@ class Category(SQLModel, table=True):
     )
     name: str = Field(index=True)
     url: str
+    company: Optional["Company"] = Relationship(back_populates="categories")

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./stop.sh > /dev/null 2>&1
+
 cd api
 nohup uv run fastapi run --host 0.0.0.0 main.py > api.log 2>&1 &
 echo $! > api.pid
