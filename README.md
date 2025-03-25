@@ -10,6 +10,34 @@ There is a site that do this: [JobRadar](https://www.jobradar.live/) but it seem
 
 So I want to make a similar site except that users can set their own sites and keywords to monitor, with all configuration data saved locally in caches (export will be allowed).
 
+## Quickstart 
+
+Install uv 
+
+```
+# MAC
+brew install uv
+
+# Fedora
+sudo dnf install uv
+```
+
+Install Python version (I thought this is supposed to be automatic but I can't get it to work...)
+
+```
+uv python install 3.11
+```
+
+Then start the services
+
+```
+./start_db
+./start_api.sh
+./start_scraper.sh
+```
+
+Note: Ollama is currently not being used, since using smaller local models results in bad parsing. 
+
 ## Design
 
 ![](assets/images/mockup.png)

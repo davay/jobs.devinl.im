@@ -3,7 +3,5 @@ name = "scraper"
 version = "0.1.0"
 description = "Flexible LLM-powered (crawl4ai) web scraper for job postings"
 readme = "README.md"
-requires-python = "~=3.11"
-dependencies = [
-    "crawl4ai>=0.5.0.post6",
-]
+requires-python = "~=3.11.0"
+dependencies = ["crawl4ai>=0.5.0.post6"]

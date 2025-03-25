@@ -1,8 +1,8 @@
-{"title": "Technical Infrastructure Program Manager, Infrastructure Capacity Management", "date": "2025-03-24", "error": false}
+{"title": "Technical Infrastructure Program Manager, Infrastructure Capacity Management", "date": "N/A", "error": false}
 {"title": "Sr Customer Success Mgr, Strategic Account Services", "date": "2025-03-24", "error": false}
+{"title": "Senior Applied Scientist, ShipTech Analytics", "date": "2025-03-25", "error": false}
 {"title": "Sr Software Development Engineer, AWS Open Data Analytics Engines", "date": "2025-03-24", "error": false}
 {"title": "Senior Software Development Engineer", "date": "2025-03-24", "error": false}
-{"title": "Senior Technical Infrastructure Program Manager, Infrastructure Capacity Management", "date": "2025-03-24", "error": false}
 {"title": "Software Development Engineer", "date": "2025-03-25", "error": false}
 {"title": "Co-Sell Initiatives Manager", "date": "2025-03-25", "error": false}
 {"title": "System Dev Engineer, Kuiper Satellite Release management", "date": "2025-03-25", "error": false}
@@ -10,35 +10,36 @@
 {"title": "Senior Automation Engineer - Oxnard, CA, ARS-OXR1-RME", "date": "2025-03-24", "error": false}
 {"title": "Technical Infrastructure Program Manager, Infrastructure Capacity Management", "date": "2025-03-25", "error": false}
 {"title": "Sr Customer Success Mgr, Strategic Account Services", "date": "2025-03-24", "error": false}
-{"title": "Senior Security Software Engineer", "date": "2025-03-24", "error": false}
-{"title": "Senior Software Engineer", "date": "2025-03-24", "error": false}
-{"title": "Launch Manager", "date": "2025-03-24", "error": false}
-{"title": "Senior Producer - Franchise Creative & Design - Minecraft", "date": "2025-03-24", "error": false}
-{"title": "Digital Account Manager", "date": "2025-03-24", "error": false}
-{"title": "Senior Technical Program Manager, Minecraft", "date": "2025-03-24", "error": false}
-{"title": "Software Engineer", "date": "2025-03-24", "error": false}
-{"title": "Customer Business Outcomes Specialist", "date": "2025-03-24", "error": false}
-{"title": "Data Center Inventory & Asset Technician (DIAT)", "date": "2025-03-24", "error": false}
-{"title": "Sales Leader, Federal Delivery - CTJ - Top Secret", "date": "2025-03-24", "error": false}
-{"title": "Senior Software Engineer", "date": "2025-03-24", "error": false}
-{"title": "Senior Manager, E+D Strategy", "date": "2025-03-24", "error": false}
-{"title": "Solution Area Sales Specialist", "date": "2025-03-24", "error": false}
-{"title": "Principal Software Engineer", "date": "2025-03-24", "error": false}
-{"title": "Data Center Critical Environment Technician Manager (Night Shift)", "date": "2025-03-24", "error": false}
-{"title": "Director, E+D Strategy", "date": "2025-03-24", "error": false}
-{"title": "Principal Software Engineer", "date": "2025-03-24", "error": false}
-{"title": "Software Engineer II", "date": "2025-03-24", "error": false}
-{"title": "Critical Environment Technician", "date": "2025-03-24", "error": false}
-{"title": "Principal Security Research Manager", "date": "2025-03-24", "error": false}
+{"title": "Senior Applied Scientist, ShipTech Analytics", "date": "N/A", "error": false}
+{"title": "Senior Security Software Engineer", "date": "2025-03-25", "error": false}
+{"title": "Senior Software Engineer", "date": "2025-03-25", "error": false}
+{"title": "Launch Manager", "date": "2025-03-25", "error": false}
+{"title": "Senior Producer - Franchise Creative & Design - Minecraft", "date": "2025-03-25", "error": false}
+{"title": "Digital Account Manager", "date": "2025-03-25", "error": false}
+{"title": "Senior Technical Program Manager, Minecraft", "date": "2025-03-25", "error": false}
+{"title": "Software Engineer", "date": "2025-03-25", "error": false}
+{"title": "Customer Business Outcomes Specialist", "date": "2025-03-25", "error": false}
+{"title": "Data Center Inventory & Asset Technician (DIAT)", "date": "2025-03-25", "error": false}
+{"title": "Sales Leader, Federal Delivery - CTJ - Top Secret", "date": "2025-03-25", "error": false}
+{"title": "Senior Software Engineer", "date": "2025-03-25", "error": false}
+{"title": "Senior Manager, E+D Strategy", "date": "2025-03-25", "error": false}
+{"title": "Solution Area Sales Specialist", "date": "2025-03-25", "error": false}
+{"title": "Principal Software Engineer", "date": "2025-03-25", "error": false}
+{"title": "Data Center Critical Environment Technician Manager (Night Shift)", "date": "2025-03-25", "error": false}
+{"title": "Director, E+D Strategy", "date": "2025-03-25", "error": false}
+{"title": "Principal Software Engineer", "date": "2025-03-25", "error": false}
+{"title": "Software Engineer II", "date": "2025-03-25", "error": false}
+{"title": "Critical Environment Technician", "date": "2025-03-25", "error": false}
+{"title": "Principal Security Research Manager", "date": "2025-03-25", "error": false}
 {"title": "ASO Readiness Program Manager", "date": "N/A", "error": false}
-{"title": "US-Business Expert", "date": "2025-03-24", "error": false}
-{"title": "US-Business Pro", "date": "2025-03-24", "error": false}
-{"title": "US-Genius", "date": "2025-03-24", "error": false}
-{"title": "US-Creative", "date": "2025-03-24", "error": false}
-{"title": "US-Operations Expert", "date": "2025-03-24", "error": false}
-{"title": "US-Expert", "date": "2025-03-24", "error": false}
-{"title": "US-Technical Specialist", "date": "2025-03-24", "error": false}
-{"title": "US - Specialist: Full-Time, Part-Time, and Part-Time Temporary", "date": "2025-03-24", "error": false}
+{"title": "US-Business Expert", "date": "2025-03-25", "error": false}
+{"title": "US-Business Pro", "date": "2025-03-25", "error": false}
+{"title": "US-Genius", "date": "2025-03-25", "error": false}
+{"title": "US-Creative", "date": "2025-03-25", "error": false}
+{"title": "US-Operations Expert", "date": "2025-03-25", "error": false}
+{"title": "US-Expert", "date": "2025-03-25", "error": false}
+{"title": "US-Technical Specialist", "date": "2025-03-25", "error": false}
+{"title": "US - Specialist: Full-Time, Part-Time, and Part-Time Temporary", "date": "2025-03-25", "error": false}
 {"title": "Thermal Device Product Design Engineer", "date": "2025-03-24", "error": false}
 {"title": "Thermal Device Product Design Engineer - Mechanical", "date": "2025-03-24", "error": false}
 {"title": "Thermal Device Product Design Engineer - Mechanical", "date": "2025-03-24", "error": false}
