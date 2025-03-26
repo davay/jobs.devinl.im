@@ -21,12 +21,35 @@ Seeding the database...
  
              Logs:
  
-      INFO   Started server process [11950]
+      INFO   Started server process [6415]
       INFO   Waiting for application startup.
       INFO   Application startup complete.
       INFO   Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-      INFO   127.0.0.1:47760 - "GET /get_sources HTTP/1.1" 200
-      INFO   127.0.0.1:60854 - "POST /submit_jobs HTTP/1.1" 200
-      INFO   192.168.134.175:56075 - "GET /get_jobs HTTP/1.1" 200
-      INFO   192.168.134.175:56081 - "GET /get_jobs HTTP/1.1" 200
-      INFO   192.168.134.175:56082 - "GET /get_sources HTTP/1.1" 200
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+      INFO   192.168.134.175:56227 - "GET / HTTP/1.1" 404
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+   WARNING   Invalid HTTP request received.
+      INFO   192.168.134.175:56227 - "GET /docs HTTP/1.1" 200
+      INFO   192.168.134.175:56227 - "GET /openapi.json HTTP/1.1" 200
+      INFO   192.168.134.175:56227 - "GET /get_sources HTTP/1.1" 200
+      INFO   192.168.134.175:56238 - "GET /get_jobs HTTP/1.1" 404
+      INFO   127.0.0.1:48228 - "GET /get_sources HTTP/1.1" 200
+      INFO   127.0.0.1:49692 - "POST /submit_jobs HTTP/1.1" 200
+      INFO   192.168.134.175:56243 - "GET /docs HTTP/1.1" 200
+      INFO   192.168.134.175:56243 - "GET /openapi.json HTTP/1.1" 200
+      INFO   192.168.134.175:56243 - "GET /get_jobs HTTP/1.1" 200
+      INFO   192.168.134.175:56244 - "GET /get_sources HTTP/1.1" 200
+      INFO   192.168.134.175:56245 - "GET /get_jobs HTTP/1.1" 200
+      INFO   127.0.0.1:53262 - "GET /get_sources HTTP/1.1" 200
+      INFO   127.0.0.1:56750 - "POST /submit_jobs HTTP/1.1" 200
+      INFO   127.0.0.1:43474 - "GET /get_sources HTTP/1.1" 200
+      INFO   127.0.0.1:38634 - "POST /submit_jobs HTTP/1.1" 200
+      INFO   127.0.0.1:53432 - "GET /get_sources HTTP/1.1" 200
+      INFO   127.0.0.1:60486 - "POST /submit_jobs HTTP/1.1" 200

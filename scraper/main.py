@@ -71,6 +71,22 @@ async def main():
                 config=crawler_config,
             )
 
+            ### FOR TESTING ###
+            # with open("raw_html.txt", "w") as file:
+            #     file.write(result.html)
+            # with open("cleaned_html.txt", "w") as file:
+            #     file.write(result.cleaned_html)
+            #
+            # markdown = result.markdown
+            # with open("raw_markdown.txt", "w") as file:
+            #     file.write(markdown.raw_markdown)
+            # with open("filtered_markdown.txt", "w") as file:
+            #     file.write(markdown.fit_markdown)
+            # with open("filtered_html.txt", "w") as file:
+            #     file.write(markdown.fit_html)
+            # with open("result.txt", "w") as file:
+            #     file.write(result.extracted_content)
+
             contents: List(dict) = json.loads(result.extracted_content)  # type: ignore
             for content in contents:
                 job = {}
@@ -85,20 +101,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-### FOR TESTING ###
-
-# with open("raw_html.txt", "w") as file:
-#     file.write(result.html)
-# with open("cleaned_html.txt", "w") as file:
-#     file.write(result.cleaned_html)
-#
-# markdown = result.markdown
-# with open("raw_markdown.txt", "w") as file:
-#     file.write(markdown.raw_markdown)
-# with open("filtered_markdown.txt", "w") as file:
-#     file.write(markdown.fit_markdown)
-# with open("filtered_html.txt", "w") as file:
-#     file.write(markdown.fit_html)
-# with open("result.txt", "w") as file:
-#     file.write(result.extracted_content)
