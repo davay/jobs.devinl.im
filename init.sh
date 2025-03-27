@@ -1,4 +1,5 @@
 #!/bin/bash
-  
-pnpx playwright install-deps
-playwright install firefox
+(
+  cd web || exit
+  pnpm install
+)
