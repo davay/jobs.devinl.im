@@ -6,9 +6,10 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { useState, useEffect } from 'react'
+import { JobDTO } from '@/types'
 
 export default function Dashboard() {
-  const [jobs, setJobs] = useState([])
+  const [jobs, setJobs] = useState<JobDTO[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {

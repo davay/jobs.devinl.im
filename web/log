@@ -160,3 +160,11 @@ Caused by:
 5:20:54 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
 5:23:28 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
 5:23:44 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:40:22 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:40:34 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:40:34 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:40:59 AM [vite] (client) hmr update /src/index.css, /src/components/Dashboard.tsx
+5:42:29 AM [vite] (client) hmr update /src/index.css, /src/components/Dashboard.tsx
+5:42:33 AM [vite] (client) hmr update /src/index.css, /src/components/Dashboard.tsx
+5:44:37 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:45:06 AM [vite] (client) page reload src/types.ts
