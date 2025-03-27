@@ -467,3 +467,232 @@ Caused by:
 6:54:44 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
 6:56:44 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
 6:57:12 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+7:00:27 AM [vite] (client) hmr update /src/index.css, /src/components/Dashboard.tsx, /src/components/Sources.tsx
+7:01:26 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:01:27 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:01:56 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:02:09 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:02:30 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:03:11 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:03:25 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:05:35 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:05:57 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+7:06:04 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:06:06 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:07:53 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:08:04 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+7:11:01 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+7:12:18 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:12:34 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:16:37 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:16:48 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:17:01 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:36:21 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:36:36 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:36:39 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:36:39 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:36:44 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:36:44 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:36:52 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:36:55 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:36:58 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:37:01 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:37:04 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:37:05 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:37:19 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:37:19 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:37:21 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:38:31 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:38:39 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:38:39 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:38:49 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:40:07 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:40:13 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:40:13 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:40:15 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:40:48 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:41:03 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:41:09 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:41:09 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:41:12 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:41:49 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:42:04 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:42:19 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:42:40 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:43:32 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:43:39 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+7:44:28 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:45:26 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:46:23 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:46:46 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:46:50 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:47:01 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:47:05 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:47:19 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:47:26 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:48:13 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:50:17 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:51:32 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:51:56 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:52:06 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+7:52:32 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+7:53:15 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:53:23 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:54:02 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:54:07 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:54:20 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:54:23 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:54:26 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:54:29 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+7:55:06 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:55:13 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:55:13 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:55:34 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:55:42 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:55:42 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:55:48 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+7:57:23 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:00:04 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:00:18 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:00:24 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:00:57 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:01:55 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:01:59 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:02:38 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:02:47 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:03:05 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:03:17 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:03:17 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:03:20 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:03:28 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:03:33 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:03:37 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:03:58 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:02 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:06 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:09 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:13 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:13 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:22 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:35 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:39 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:43 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:45 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:04:49 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:05:06 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:07:09 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:07:40 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:07:55 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:08:01 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:08:22 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:08:29 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:08:44 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:08:48 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:08:53 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:08:56 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:08:59 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:09:10 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:09:19 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:09:32 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:09:43 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:09:48 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:09:51 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:09:54 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:09:56 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:10:31 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:10:38 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:10:48 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:10:55 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:10:55 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:11:00 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:11:08 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:11:17 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:11:23 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:11:54 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:13:28 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:13:29 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:13:29 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:13:53 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:13:56 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:14:01 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:14:12 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:14:18 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:14:25 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:14:26 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+8:14:42 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:14:45 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:14:45 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:14:56 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:14:59 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:15:02 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:15:04 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:15:04 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+8:15:21 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:15:39 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:15:44 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:15:56 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:16:02 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:16:04 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:01 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:15 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:27 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:27 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:32 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:36 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:36 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Sources.tsx:25:1]
+ 22 |   }, []);
+ 23 | 
+ 24 |   return (
+ 25 |     <div>
+    :      ^^^
+ 26 |       <h1 className="py-2">Tracked Sources</h1>
+ 27 |       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+ 28 |         {sources.map((source, index) => (
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Sources.tsx
+  
+8:17:36 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:36 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Sources.tsx:25:1]
+ 22 |   }, []);
+ 23 | 
+ 24 |   return (
+ 25 |     <div>
+    :      ^^^
+ 26 |       <h1 className="py-2">Tracked Sources</h1>
+ 27 |       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+ 28 |         {sources.map((source, index) => (
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Sources.tsx
+  
+8:17:40 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:40 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:45 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:49 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:51 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:53 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:56 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:17:56 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:18:04 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:18:04 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:18:06 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:18:10 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:18:14 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:18:56 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:19:06 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:19:31 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:19:35 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:19:35 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:19:38 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+8:19:40 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css

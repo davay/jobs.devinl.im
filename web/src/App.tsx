@@ -16,13 +16,17 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navigation />
-      <div className="pt-12">
-        <Routes>
-          {routes.map(route =>
-            <Route key={route.path} path={route.path} element={route.element} />
-          )}
-        </Routes>
+      <div className="min-h-screen flex flex-col items-center">
+        <div className="w-full max-w-[75%] min-w-[750px]">
+          <Navigation />
+          <div className="pt-4">
+            <Routes>
+              {routes.map(route =>
+                <Route key={route.path} path={route.path} element={route.element} />
+              )}
+            </Routes>
+          </div>
+        </div>
       </div>
     </BrowserRouter>
   )

@@ -10,7 +10,6 @@ const api =
     if (!res.ok) {
       return Promise.reject({ status: res.status, data })
     }
-    console.log(data)
     return data
   },
 
@@ -20,7 +19,6 @@ const api =
     if (!res.ok) {
       return Promise.reject({ status: res.status, data })
     }
-    console.log(data)
     return data
   }
 }

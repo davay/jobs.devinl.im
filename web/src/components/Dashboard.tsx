@@ -24,8 +24,8 @@ export default function Dashboard() {
       <h1 className="py-2">Recent Job Postings</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {jobs.map((job, index) => (
-          <Card key={index}>
-            <CardContent>
+          <Card key={index} className="h-30">
+            <CardContent className="m-auto">
               <CardTitle>{job.title}</CardTitle>
               <CardDescription>{job.company}</CardDescription>
               <CardDescription>{job.date}</CardDescription>

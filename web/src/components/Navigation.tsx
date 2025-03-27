@@ -17,7 +17,7 @@ export default function Navigation() {
   ]
 
   return (
-    <div className="fixed p-4 w-full top-0 bg-white border">
+    <div className="p-4 w-full top-0 bg-white border rounded-md">
       <NavigationMenu>
         <NavigationMenuList>
           {navItems.map(item =>

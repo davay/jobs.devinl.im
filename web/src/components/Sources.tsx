@@ -24,13 +24,15 @@ export default function Dashboard() {
       <h1 className="py-2">Tracked Sources</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {sources.map((source, index) => (
-          <Card key={index}>
-            <CardContent>
-              <CardTitle>{source.company_name}</CardTitle>
-              <CardDescription>{source.category_name}</CardDescription>
-              <CardDescription>{source.url}</CardDescription>
-            </CardContent>
-          </Card>
+          <a href={source.url} target="_blank">
+            <Card key={index} className="h-48">
+              <CardContent className="p-4 flex flex-col h-full">
+                <CardTitle>{source.company_name}</CardTitle>
+                <CardDescription>{source.category_name}</CardDescription>
+                <div className="pt-2 mt-auto break-all">{source.url}</div>
+              </CardContent>
+            </Card>
+          </a>
         ))}
       </div>
     </div>
