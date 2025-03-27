@@ -1,8 +1,13 @@
-import { useNavigate, useLocation } from 'react-router-dom'
-import { Button } from "@/components/ui/button"
+import { Link, useLocation } from 'react-router-dom'
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import { cn } from "@/lib/utils"
 
 export default function Navigation() {
-  const navigate = useNavigate()
   const location = useLocation()
 
   const navItems = [
@@ -12,16 +17,21 @@ export default function Navigation() {
   ]
 
   return (
-    <div className="flex flex-row gap-4">
-      {navItems.map(item =>
-        <Button
-          key={item.path}
-          onClick={() => navigate(item.path)}
-          variant={`${location.pathname === item.path ? 'outline' : 'secondary'}`}
-        >
-          {item.label}
-        </Button>
-      )}
+    <div className="fixed p-4 w-full top-0 bg-white border">
+      <NavigationMenu>
+        <NavigationMenuList>
+          {navItems.map(item =>
+            <NavigationMenuItem key={item.path}>
+              <Link
+                to={item.path}
+                className={cn(navigationMenuTriggerStyle(), location.pathname === item.path ? "bg-accent text-accent-foreground" : "bg-background")}
+              >
+                {item.label}
+              </Link>
+            </NavigationMenuItem>
+          )}
+        </NavigationMenuList>
+      </NavigationMenu>
     </div>
   )
 }

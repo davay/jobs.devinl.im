@@ -196,3 +196,274 @@ Caused by:
 5:57:28 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
 5:57:38 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
 5:58:15 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+6:00:56 AM [vite] (client) page reload src/types.ts
+6:01:23 AM [vite] (client) page reload src/types.ts
+6:01:56 AM [vite] (client) page reload src/types.ts
+6:02:17 AM [vite] (client) page reload src/types.ts
+6:02:21 AM [vite] (client) page reload src/types.ts
+6:02:47 AM [vite] (client) hmr update /src/index.css, /src/components/Dashboard.tsx
+6:02:55 AM [vite] (client) hmr update /src/index.css, /src/components/Dashboard.tsx
+6:03:58 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+6:04:59 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+6:05:08 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+6:05:27 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+6:06:02 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+6:06:19 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+6:06:48 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:06:54 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:07:05 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+6:07:06 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+6:07:06 AM [vite] (client) hmr update /src/components/Sources.tsx, /src/index.css
+6:08:47 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:08:47 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:09:14 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:09:14 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:10:19 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:10:40 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:10:50 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:10:50 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:11:05 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:11:15 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:11:29 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:11:34 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:11:52 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:12:03 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:12:48 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:12:53 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:13:04 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:13:07 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:14:08 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:14:34 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:06 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:06 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:15:1]
+ 12 |   ]
+ 13 | 
+ 14 |   return (
+ 15 |     <div className="fixed top-0 left-0 right-0 bg-background z-10 p-4 border-b flex flex-row gap-4">
+    :      ^^^
+ 16 |     //<div className="fixed top pb-4 border-b flex flex-row gap-4">
+ 17 |         {navItems.map(item =>
+ 18 |           <Button
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:15:08 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:27 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:32 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:35 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:40 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:40 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:44 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:47 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:51 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:15:55 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:16:31 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:16:41 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:17:31 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:19:36 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:19:42 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:21:48 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:21:58 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:22:03 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:22:09 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:22:11 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:22:16 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:29:01 AM [vite] (client) page reload package.json
+6:35:13 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:35:15 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:36:03 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:36:17 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:36:18 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:39:29 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:39:29 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:23:1]
+ 20 |   ]
+ 21 | 
+ 22 |   return (
+ 23 |     <div>
+    :      ^^^
+ 24 |       <NavigationMenu>
+ 25 |         <NavigationMenuList>
+ 26 |           {navItems.map(item => 
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:39:51 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:39:51 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:23:1]
+ 20 |   ]
+ 21 | 
+ 22 |   return (
+ 23 |     <div>
+    :      ^^^
+ 24 |       <NavigationMenu>
+ 25 |         <NavigationMenuList>
+ 26 |           {navItems.map(item =>
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:40:07 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:40:07 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:23:1]
+ 20 |   ]
+ 21 | 
+ 22 |   return (
+ 23 |     <div>
+    :      ^^^
+ 24 |       <NavigationMenu>
+ 25 |         <NavigationMenuList>
+ 26 |           {navItems.map(item =>
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:40:42 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:40:43 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:23:1]
+ 20 |   ]
+ 21 | 
+ 22 |   return (
+ 23 |     <div>
+    :      ^^^
+ 24 |       <NavigationMenu>
+ 25 |         <NavigationMenuList>
+ 26 |           {navItems.map(item =>
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:41:04 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:41:04 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:23:1]
+ 20 |   ]
+ 21 | 
+ 22 |   return (
+ 23 |     <div>
+    :      ^^^
+ 24 |       <NavigationMenu>
+ 25 |         <NavigationMenuList>
+ 26 |           {navItems.map(item =>
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:41:20 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:41:20 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:23:1]
+ 20 |   ]
+ 21 | 
+ 22 |   return (
+ 23 |     <div>
+    :      ^^^
+ 24 |       <NavigationMenu>
+ 25 |         <NavigationMenuList>
+ 26 |           {navItems.map(item =>
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:41:46 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:41:46 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:23:1]
+ 20 |   ]
+ 21 | 
+ 22 |   return (
+ 23 |     <div>
+    :      ^^^
+ 24 |       <NavigationMenu>
+ 25 |         <NavigationMenuList>
+ 26 |           {navItems.map(item =>
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:41:55 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:41:55 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:23:1]
+ 20 |   ]
+ 21 | 
+ 22 |   return (
+ 23 |     <div>
+    :      ^^^
+ 24 |       <NavigationMenu>
+ 25 |         <NavigationMenuList>
+ 26 |           {navItems.map(item =>
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:44:48 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+6:45:04 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:45:04 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx:22:1]
+ 19 |   ]
+ 20 | 
+ 21 |   return (
+ 22 |     <div>
+    :      ^^^
+ 23 |       <NavigationMenu>
+ 24 |         <NavigationMenuList>
+ 25 |           {navItems.map(item =>
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Navigation.tsx
+  
+6:45:07 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:45:07 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:45:08 AM [vite] (client) ✨ new dependencies optimized: @radix-ui/react-navigation-menu, lucide-react
+6:45:08 AM [vite] (client) ✨ optimized dependencies changed. reloading
+6:52:03 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:52:30 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:52:38 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:52:38 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:54:14 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:54:25 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:54:37 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:54:37 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:54:44 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:56:44 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+6:57:12 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css

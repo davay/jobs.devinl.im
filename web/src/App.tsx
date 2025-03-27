@@ -17,11 +17,13 @@ function App() {
   return (
     <BrowserRouter>
       <Navigation />
-      <Routes>
-        {routes.map(route =>
-          <Route key={route.path} path={route.path} element={route.element} />
-        )}
-      </Routes>
+      <div className="pt-12">
+        <Routes>
+          {routes.map(route =>
+            <Route key={route.path} path={route.path} element={route.element} />
+          )}
+        </Routes>
+      </div>
     </BrowserRouter>
   )
 }
