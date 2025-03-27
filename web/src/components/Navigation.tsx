@@ -11,12 +11,12 @@ export default function Navigation() {
   ]
 
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row gap-4">
       {navItems.map(item =>
         <button
           key={item.path}
           onClick={() => navigate(item.path)}
-          className={`${location.pathname === item.path ? 'bg-red-500' : 'bg-gray-500'}`}
+          className={`px-4 py-2 rounded-md ${location.pathname === item.path ? 'bg-blue-400' : 'bg-gray-400'}`}
         >
           {item.label}
         </button>
