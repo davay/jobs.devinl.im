@@ -63,3 +63,100 @@ Caused by:
 4:36:32 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
 4:36:32 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
 4:36:40 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+4:43:52 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+4:44:32 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+4:45:45 AM [vite] (client) hmr update /src/index.css, /src/components/Dashboard.tsx
+4:46:03 AM [vite] (client) hmr update /src/index.css, /src/components/Dashboard.tsx
+4:50:27 AM [vite] changed tsconfig file detected: /Users/davay/Mutagen/nobara-jobs/web/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+4:50:27 AM [vite] (client) page reload tsconfig.json
+4:51:20 AM [vite] (client) hmr update /src/index.css
+4:51:20 AM [vite] Internal server error: Can't resolve 'tw-animate-css' in '/Users/davay/Mutagen/nobara-jobs/web/src'
+  Plugin: @tailwindcss/vite:generate:serve
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/index.css
+      at finishWithoutResolve (/Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/enhanced-resolve@5.18.1/node_modules/enhanced-resolve/lib/Resolver.js:564:18)
+      at /Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/enhanced-resolve@5.18.1/node_modules/enhanced-resolve/lib/Resolver.js:656:15
+      at /Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/enhanced-resolve@5.18.1/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+      at eval (eval at create (/Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/tapable@2.2.1/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+      at /Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/enhanced-resolve@5.18.1/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+      at eval (eval at create (/Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/tapable@2.2.1/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)
+      at /Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/enhanced-resolve@5.18.1/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43
+      at /Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/enhanced-resolve@5.18.1/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+      at eval (eval at create (/Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/tapable@2.2.1/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+      at /Users/davay/Mutagen/nobara-jobs/web/node_modules/.pnpm/enhanced-resolve@5.18.1/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+4:51:22 AM [vite] (client) page reload package.json
+4:52:04 AM [vite] (client) page reload package.json
+4:55:00 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+4:56:43 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+4:58:19 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+4:58:19 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Dashboard.tsx:10:1]
+  7 |   const jobs = api.getJobs()
+  8 | 
+  9 |   return (
+ 10 |     <div>
+    :      ^^^
+ 11 |       <h2>Recent Job Postings</h2>
+ 12 | 
+ 13 |       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Dashboard.tsx
+  
+4:58:41 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+4:58:41 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Dashboard.tsx:15:1]
+ 12 |   const jobs = api.getJobs()
+ 13 | 
+ 14 |   return (
+ 15 |     <div>
+    :      ^^^
+ 16 |       <h2>Recent Job Postings</h2>
+ 17 | 
+ 18 |       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Dashboard.tsx
+  
+5:00:37 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:00:37 AM [vite] Internal server error:   x Unexpected token `div`. Expected jsx identifier
+    ,-[/Users/davay/Mutagen/nobara-jobs/web/src/components/Dashboard.tsx:15:1]
+ 12 |   const jobs = api.getJobs()
+ 13 | 
+ 14 |   return (
+ 15 |     <div>
+    :      ^^^
+ 16 |       <h2>Recent Job Postings</h2>
+ 17 | 
+ 18 |       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    `----
+
+
+Caused by:
+    Syntax Error
+  Plugin: vite:react-swc
+  File: /Users/davay/Mutagen/nobara-jobs/web/src/components/Dashboard.tsx
+  
+5:00:51 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:00:51 AM [vite] (client) ✨ new dependencies optimized: clsx, tailwind-merge
+5:00:51 AM [vite] (client) ✨ optimized dependencies changed. reloading
+5:01:11 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:01:42 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:02:10 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:02:23 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:02:39 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:07:10 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:11:39 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:13:46 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:13:49 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:14:06 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:20:54 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:23:28 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:23:44 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
