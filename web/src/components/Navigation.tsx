@@ -1,4 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom'
+import { Button } from "@/components/ui/button"
 
 export default function Navigation() {
   const navigate = useNavigate()
@@ -13,13 +14,13 @@ export default function Navigation() {
   return (
     <div className="flex flex-row gap-4">
       {navItems.map(item =>
-        <button
+        <Button
           key={item.path}
           onClick={() => navigate(item.path)}
-          className={`px-4 py-2 rounded-md ${location.pathname === item.path ? 'bg-blue-400' : 'bg-gray-400'}`}
+          variant={`${location.pathname === item.path ? 'outline' : 'secondary'}`}
         >
           {item.label}
-        </button>
+        </Button>
       )}
     </div>
   )

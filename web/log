@@ -168,3 +168,31 @@ Caused by:
 5:42:33 AM [vite] (client) hmr update /src/index.css, /src/components/Dashboard.tsx
 5:44:37 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
 5:45:06 AM [vite] (client) page reload src/types.ts
+5:48:40 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:48:45 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:50:01 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:50:14 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:50:14 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:50:18 AM [vite] (client) ✨ new dependencies optimized: @radix-ui/react-slot, class-variance-authority
+5:50:18 AM [vite] (client) ✨ optimized dependencies changed. reloading
+5:50:29 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:51:08 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:52:29 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:52:40 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:52:46 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:53:02 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:53:23 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:54:51 AM [vite] (client) hmr update /src/index.css
+5:55:08 AM [vite] (client) hmr update /src/index.css
+5:55:35 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:55:38 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:55:38 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:55:46 AM [vite] (client) hmr update /src/components/Navigation.tsx, /src/index.css
+5:56:31 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:56:45 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:56:56 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:57:01 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:57:02 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:57:28 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:57:38 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
+5:58:15 AM [vite] (client) hmr update /src/components/Dashboard.tsx, /src/index.css
