@@ -8,4 +8,6 @@ node_modules
 __pycache__
 .venv
 
-
+# dev setup, only ignores them for our files that are exactly one dir deep
+/*/pid
+/*/log
