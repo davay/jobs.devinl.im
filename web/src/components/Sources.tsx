@@ -15,7 +15,7 @@ export default function Dashboard() {
     api.getSources()
       .then(sourceData => setSources(sourceData))
       .catch(err => {
-        console.error('Failed to fetch jobs:', err);
+        console.error('Failed to fetch sources:', err);
       })
   }, []);
 
