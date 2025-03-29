@@ -38,7 +38,7 @@ def seed_database(engine):
             ),
             "amazon_tpm": Category(
                 company_id=companies["amazon"].id,
-                name="Technical PM",
+                name="Technical Project Management",
                 url="https://www.amazon.jobs/en/search?sort=recent&category%5B%5D=project-program-product-management-technical&country%5B%5D=USA",
             ),
             "amazon_ml": Category(
@@ -63,8 +63,8 @@ def seed_database(engine):
             ),
             "microsoft_pm": Category(
                 company_id=companies["microsoft"].id,
-                name="Data Science",
-                url="https://jobs.careers.microsoft.com/global/en/search?lc=United%20States&p=Research%2C%20Applied%2C%20%26%20Data%20Sciences&l=en_us&pg=1&pgSz=20&o=Recent&flt=true",
+                name="Project Management",
+                url="https://jobs.careers.microsoft.com/global/en/search?lc=United%20States&p=Program%20Management&l=en_us&pg=1&pgSz=20&o=Recent&flt=true",
             ),
             "apple_ml": Category(
                 company_id=companies["apple"].id,
