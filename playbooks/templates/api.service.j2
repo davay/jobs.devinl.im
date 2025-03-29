@@ -4,10 +4,11 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash -c 'ENVIRONMENT={{ environment }} uv run fastapi run --host 0.0.0.0 {{ main_path }}'
+ExecStart=uv run fastapi run --host 0.0.0.0 {{ main_path }}
 WorkingDirectory={{ project_root }}/api
 User={{ user }}
 Group={{ group }}
+Environment="ENVIRONMENT=production"
 Restart=on-failure
 RestartSec=5s
 

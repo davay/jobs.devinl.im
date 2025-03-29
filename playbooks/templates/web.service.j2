@@ -8,6 +8,7 @@ ExecStart=pnpm run dev --host
 WorkingDirectory={{ project_root }}/web
 User={{ user }}
 Group={{ group }}
+Environment="ENVIRONMENT=production"
 Restart=on-failure
 RestartSec=5s
 

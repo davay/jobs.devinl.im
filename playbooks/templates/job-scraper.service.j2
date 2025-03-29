@@ -8,6 +8,7 @@ ExecStart=uv run python {{ main_path }}
 WorkingDirectory={{ project_root }}/scraper
 User={{ user }}
 Group={{ group }}
+Environment="ENVIRONMENT=production"
 Environment="ANTHROPIC_API_KEY={{ anthropic_api_key }}"
 
 [Install]
