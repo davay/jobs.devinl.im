@@ -3,7 +3,7 @@ from typing import List
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from sqlmodel import Session, select
+from sqlmodel import Session, desc, select
 
 from database import get_engine
 from models import Category, Job, JobDTO, SourceDTO
@@ -88,7 +88,7 @@ def submit_jobs(jobs: list[JobDTO]):
 def get_jobs():
     with Session(engine) as session:
         result = []
-        statement = select(Job)
+        statement = select(Job).order_by(desc(Job.date))
 
         jobs = session.exec(statement).all()
 

@@ -21,7 +21,8 @@ export default function Dashboard() {
 
   return (
     <div>
-      <h1 className="py-2">Tracked Sources</h1>
+      <h1 className="font-bold text-lg text-left pl-1 py-2">Tracked Sources</h1>
+      <p className="text-left text-sm pl-1 pb-2">A source's category may not be comparable between companies. For example, Microsoft categorizes into "professions" (broad categories) while Apple groups by teams (so program manager jobs can be found inside its Software category).</p>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {sources.map((source, index) => (
           <a href={source.url} target="_blank">

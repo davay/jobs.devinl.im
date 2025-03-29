@@ -1,9 +1,10 @@
 export interface JobDTO {
   title: string
   company: string
+  category: string
+  url: string
   date: string
   retrieval_date: string
-  url: string
 }
 
 export interface SourceDTO {

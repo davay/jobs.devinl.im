@@ -1,3 +1,3 @@
 #!/bin/bash
 
-(cd api && uv run seed.py)
+(cd api && uv run reset.py)

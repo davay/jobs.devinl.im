@@ -1,6 +1,6 @@
 export default function Notification() {
   return (
-    <div>
+    <div className="text-left pl-1">
       Notification
     </div>
   )
