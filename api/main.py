@@ -1,4 +1,4 @@
-import socket
+import os
 from typing import List
 
 from fastapi import FastAPI, HTTPException
@@ -8,8 +8,8 @@ from sqlmodel import Session, select
 from database import get_engine, reset_database, seed_database
 from models import Category, Job, JobDTO, SourceDTO
 
-hostname = socket.gethostname()
-is_production = "jobs.devinl.im" in hostname
+is_production = os.getenv("ENVIRONMENT") == "production"
+
 root_path = "/api" if is_production else ""
 
 app = FastAPI(root_path=root_path)
