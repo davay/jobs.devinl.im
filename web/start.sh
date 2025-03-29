@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#!/bin/bash 
+pnpm install
 
 if [[ "$ENVIRONMENT" == "production" ]]; then
   read -rsp "[Web] Sudo password to setup Systemd service: " PASS
