@@ -24,8 +24,17 @@ find_services() {
 check_service_status() {
   local service="$1"
   
+  # docker -- the only docker service is db which is identical for production or dev
+  if [ -f "$service/compose.yml" ]; then
+    if (cd "$service" && docker-compose ps --quiet | grep -q .); then
+      echo "Started (Docker)"
+      return 0
+    else
+      echo "Stopped"
+      return 1  
+    fi
   # systemd
-  if [[ "$ENVIRONMENT" == "production" ]]; then
+  elif [[ "$ENVIRONMENT" == "production" ]]; then
     if systemctl is-active --quiet "$service"; then
       echo "Started (systemd)"
       return 0  
@@ -34,30 +43,19 @@ check_service_status() {
       return 1  
     fi
   else
-    # docker
-    if [ -f "$service/compose.yml" ]; then
-      if (cd "$service" && docker-compose ps --quiet | grep -q .); then
-        echo "Started (Docker)"
-        return 0
-      else
-        echo "Stopped"
-        return 1  
-      fi
     # pid
-    else
-      if [ -f "$service/pid" ]; then
-        pid=$(cat "$service/pid")
-        if ps -p "$pid" > /dev/null; then
-          echo "Started (PID: $pid)"
-          return 0  
-        else
-          echo "Stopped (stale PID file)"
-          return 1  
-        fi
+    if [ -f "$service/pid" ]; then
+      pid=$(cat "$service/pid")
+      if ps -p "$pid" > /dev/null; then
+        echo "Started (PID: $pid)"
+        return 0  
       else
-        echo "Stopped"
+        echo "Stopped (stale PID file)"
         return 1  
       fi
+    else
+      echo "Stopped"
+      return 1  
     fi
   fi
 }
