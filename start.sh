@@ -5,6 +5,7 @@ if [ -z "$ENVIRONMENT" ]; then
   if [[ "${production_choice,,}" =~ ^(y|yes)$ ]]; then
     export ENVIRONMENT="production"
     echo "Setting ENVIRONMENT=production"
+  fi
 else
   echo "ENVIRONMENT is already set to: $ENVIRONMENT"
 fi
