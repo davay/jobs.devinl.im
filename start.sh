@@ -1,5 +1,14 @@
 #!/bin/bash
 
+if [ -z "$ENVIRONMENT" ]; then
+  read -rp "Is this a production environment? (y/N): " production_choice
+  if [[ "${production_choice,,}" =~ ^(y|yes)$ ]]; then
+    export ENVIRONMENT="production"
+    echo "Setting ENVIRONMENT=production"
+else
+  echo "ENVIRONMENT is already set to: $ENVIRONMENT"
+fi
+
 find_services() {
   # only search one level deep (excluding root so it doesn't find itself)
   find . -maxdepth 2 -mindepth 2 -type f -name "start.sh" -print0 | xargs -0 dirname | sort | uniq | xargs -n1 basename
