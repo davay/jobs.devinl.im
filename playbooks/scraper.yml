@@ -4,7 +4,7 @@
   vars_files:
     - shared_vars.yml
   vars:
-    service_name: job-scraper
+    service_name: scraper
     main_path: "{{ project_root }}/scraper/main.py"
   vars_prompt:
     - name: anthropic_api_key
@@ -41,12 +41,3 @@
         name: "{{ service_name }}.timer"
         enabled: yes
         state: started
-
-    - name: Check timer status
-      ansible.builtin.command: systemctl list-timers --all
-      register: timer_status
-      changed_when: false
-
-    - name: Display timer status
-      ansible.builtin.debug:
-        var: timer_status.stdout_lines
