@@ -5,8 +5,11 @@
     - shared_vars.yml
   vars:
     service_name: job-scraper
-    anthropic_api_key: "{{ lookup('community.general.onepassword', 'Anthropic API Key - jobs.devinl.im', field='credential', vault='Personal') }}"
-    script_path: "{{ project_root }}/scraper/main.py"
+    main_path: "{{ project_root }}/scraper/main.py"
+  vars_prompt:
+    - name: anthropic_api_key
+      prompt: "Please enter your Anthropic API key"
+      private: true
 
   tasks:
     - name: Create systemd service file

@@ -1,0 +1,16 @@
+[Unit]
+Description=jobs.devinl.im API Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=uv run python {{ main_path }}
+WorkingDirectory={{ project_root }}/api
+User={{ user }}
+Group={{ group }}
+Environment="ENVIRONMENT={{ environment }}"
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

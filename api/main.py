@@ -10,6 +10,7 @@ from models import Category, Job, JobDTO, SourceDTO
 
 is_production = os.getenv("ENVIRONMENT") == "production"
 
+# so that docs work https://fastapi.tiangolo.com/advanced/behind-a-proxy/
 root_path = "/api" if is_production else ""
 
 app = FastAPI(root_path=root_path)

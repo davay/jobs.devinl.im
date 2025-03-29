@@ -1,0 +1,16 @@
+[Unit]
+Description=jobs.devinl.im Web Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=pnpm run dev --host 
+WorkingDirectory={{ project_root }}/web
+User={{ user }}
+Group={{ group }}
+Environment="ENVIRONMENT={{ environment }}"
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

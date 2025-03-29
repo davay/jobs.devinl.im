@@ -8,20 +8,40 @@ find_services() {
 check_service_status() {
   local service="$1"
   
-  # check docker
-  if [ -f "$service/compose.yml" ]; then
-    if (cd "$service" && docker-compose ps --quiet | grep -q .); then
-      echo "Started (Docker)"
+  # systemd
+  if [[ "$ENVIRONMENT" == "production" ]]; then
+    if systemctl is-active --quiet "$service"; then
+      echo "Started (systemd)"
+      return 0  
     else
       echo "Stopped"
+      return 1  
     fi
-  # check pid
   else
-    if [ -f "$service/pid" ]; then
-      pid=$(cat "$service/pid")
-      echo "Started (PID: $pid)"
+    # docker
+    if [ -f "$service/compose.yml" ]; then
+      if (cd "$service" && docker-compose ps --quiet | grep -q .); then
+        echo "Started (Docker)"
+        return 0
+      else
+        echo "Stopped"
+        return 1  
+      fi
+    # pid
     else
-      echo "Stopped"
+      if [ -f "$service/pid" ]; then
+        pid=$(cat "$service/pid")
+        if ps -p "$pid" > /dev/null; then
+          echo "Started (PID: $pid)"
+          return 0  
+        else
+          echo "Stopped (stale PID file)"
+          return 1  
+        fi
+      else
+        echo "Stopped"
+        return 1  
+      fi
     fi
   fi
 }
@@ -29,10 +49,7 @@ check_service_status() {
 start_service() {
   local service="$1"
   
-  if ([ -f "$service/compose.yml" ] && 
-      (cd "$service" && 
-      docker-compose ps --quiet | grep -q .)) || 
-    [ -f "$service/pid" ]; then
+  if check_service_status "$service" > /dev/null; then
     echo "$service is already running"
   else
     echo "Starting $service..."

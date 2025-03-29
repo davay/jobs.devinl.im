@@ -3,3 +3,4 @@
 user: "{{ ansible_user_id }}"
 group: "{{ ansible_user_id }}"
 project_root: "{{ playbook_dir | dirname }}"
+environment: "production"

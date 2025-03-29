@@ -1,0 +1,30 @@
+---
+- name: Set up API Service
+  hosts: localhost
+  vars_files:
+    - shared_vars.yml
+  vars:
+    service_name: api
+    main_path: "{{ project_root }}/api/main.py"
+
+  tasks:
+    - name: Create systemd service file
+      become: true
+      ansible.builtin.template:
+        src: templates/{{ service_name }}.service.j2
+        dest: /etc/systemd/system/{{ service_name }}.service
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Reload systemd
+      become: true
+      ansible.builtin.systemd:
+        daemon_reload: yes
+
+    - name: Enable and start the service
+      become: true
+      ansible.builtin.systemd:
+        name: "{{ service_name }}"
+        enabled: true
+        state: started
