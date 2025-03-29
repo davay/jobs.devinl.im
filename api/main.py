@@ -1,3 +1,4 @@
+import socket
 from typing import List
 
 from fastapi import FastAPI, HTTPException
@@ -7,7 +8,11 @@ from sqlmodel import Session, select
 from database import get_engine, reset_database, seed_database
 from models import Category, Job, JobDTO, SourceDTO
 
-app = FastAPI()
+hostname = socket.gethostname()
+is_production = "jobs.devinl.im" in hostname
+root_path = "/api" if is_production else ""
+
+app = FastAPI(root_path=root_path)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,11 +24,6 @@ app.add_middleware(
 engine = get_engine()
 reset_database(engine)
 seed_database(engine)
-
-
-@app.get("/")
-def hihi():
-    return "hihi"
 
 
 @app.get("/get_sources", response_model=List[SourceDTO])
