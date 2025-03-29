@@ -5,7 +5,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import Session, select
 
-from database import get_engine, reset_database, seed_database
+from database import get_engine
 from models import Category, Job, JobDTO, SourceDTO
 
 is_production = os.getenv("ENVIRONMENT") == "production"
@@ -23,8 +23,6 @@ app.add_middleware(
 )
 
 engine = get_engine()
-reset_database(engine)
-seed_database(engine)
 
 
 @app.get("/get_sources", response_model=List[SourceDTO])

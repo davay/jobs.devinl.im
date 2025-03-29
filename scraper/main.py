@@ -93,6 +93,7 @@ async def main():
                 job["title"] = content["title"]
                 job["category_id"] = int(source["category_id"])
                 job["date"] = content["date"]
+                job["retrieval_date"] = today
                 jobs.append(job)
 
         submit_jobs_response = requests.post(url=submit_jobs_url, json=jobs)

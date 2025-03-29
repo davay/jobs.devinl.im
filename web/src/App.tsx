@@ -15,20 +15,22 @@ const routes = [
 function App() {
 
   return (
-    <BrowserRouter>
-      <div className="min-h-screen flex flex-col items-center">
-        <div className="w-full max-w-[75%] min-w-[750px]">
-          <Navigation />
-          <div className="pt-4">
-            <Routes>
-              {routes.map(route =>
-                <Route key={route.path} path={route.path} element={route.element} />
-              )}
-            </Routes>
+    <div>
+      <BrowserRouter>
+        <div className="min-h-screen flex flex-col items-center">
+          <div className="w-[75vw]">
+            <Navigation />
+            <div className="pt-4">
+              <Routes>
+                {routes.map(route =>
+                  <Route key={route.path} path={route.path} element={route.element} />
+                )}
+              </Routes>
+            </div>
           </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   )
 }
 

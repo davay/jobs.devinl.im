@@ -22,23 +22,19 @@ brew install uv
 sudo dnf install uv
 ```
 
-Install Python version (I thought this is supposed to be automatic but I can't get it to work...)
+Then run this init script on first run 
 
 ```
-uv python install 3.11
+./init.sh
 ```
 
-Then start the services
+Now you can use the start script and follow its instructions
 
 ```
-./start_db
-./start_api.sh
-./start_scraper.sh
+./start.sh
 ```
 
 NOTE 1: Ollama is currently not being used, since using smaller local models results in bad parsing. 
-
-NOTE 2: 1Password is used in playbooks/scraper.yml to fetch Anthropic API Key 
 
 ## Design
 
@@ -63,7 +59,6 @@ Design choices:
 
 ## TODO 
 
-- setup db models
-- make fastapi a service
 - setup page hashing, useful for sites that dont show date, we can use date first seen on refresh
 - Fix docs to mention crawl4ai instead of llm-scraper
+- Update docs architectures and guide

@@ -26,10 +26,10 @@ export default function Dashboard() {
         {sources.map((source, index) => (
           <a href={source.url} target="_blank">
             <Card key={index} className="h-48">
-              <CardContent className="p-4 flex flex-col h-full">
+              <CardContent className="p-2 flex flex-col h-full">
                 <CardTitle>{source.company_name}</CardTitle>
                 <CardDescription>{source.category_name}</CardDescription>
-                <div className="pt-2 mt-auto break-all">{source.url}</div>
+                <div className="pt-2 mt-auto break-all overflow-hidden">{source.url}</div>
               </CardContent>
             </Card>
           </a>
