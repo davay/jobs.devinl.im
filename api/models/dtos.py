@@ -12,3 +12,4 @@ class JobDTO(SQLModel):
     title: str
     category_id: int
     date: str
+    retrieval_date: str

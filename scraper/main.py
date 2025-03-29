@@ -27,7 +27,8 @@ async def main():
     api_url = "http://0.0.0.0:8000"
     get_sources_url = f"{api_url}/get_sources"
     submit_jobs_url = f"{api_url}/submit_jobs"
-    today = datetime.now().date()
+    today = datetime.today().date()
+    today_str = today.isoformat()
 
     pruning_filter = PruningContentFilter()  # type: ignore
     md_generator = DefaultMarkdownGenerator(content_filter=pruning_filter)
@@ -50,8 +51,8 @@ async def main():
             instruction=f"""Extract from each job posting:
             1. Job Title: The exact title as shown (e.g., "Director, Cloud Platform - Seattle, WA")
             2. Date: The job posting date or last updated date in YYYY-MM-DD format.
-               - For "Today" use "{today}"
-               - For "Yesterday" use "{today - timedelta(days=1)}"
+               - For "Today" use "{today_str}"
+               - For "Yesterday" use "{(today - timedelta(days=1)).isoformat()}"
                - For "X days ago" calculate from current date
 
             Use "N/A" for any missing information.
@@ -93,7 +94,7 @@ async def main():
                 job["title"] = content["title"]
                 job["category_id"] = int(source["category_id"])
                 job["date"] = content["date"]
-                job["retrieval_date"] = today
+                job["retrieval_date"] = today_str
                 jobs.append(job)
 
         submit_jobs_response = requests.post(url=submit_jobs_url, json=jobs)

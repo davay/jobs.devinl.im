@@ -67,7 +67,10 @@ def submit_jobs(jobs: list[JobDTO]):
                 results["skipped"].append(job)
             else:
                 new_job = Job(
-                    title=job.title, category_id=job.category_id, date=job.date
+                    title=job.title,
+                    category_id=job.category_id,
+                    date=job.date,
+                    retrieval_date=job.retrieval_date,
                 )
                 session.add(new_job)
                 results["created"].append(job)
@@ -97,7 +100,9 @@ def get_jobs():
                 "title": job.title,
                 "company": job.category.company.name,  # type: ignore
                 "category": job.category.name,  # type: ignore
+                "url": job.category.url,  # type: ignore
                 "date": job.date,
+                "retrieval_date": job.retrieval_date,
             }
             result.append(res)
 

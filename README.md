@@ -34,6 +34,8 @@ Now you can use the start script and follow its instructions
 ./start.sh
 ```
 
+![](assets/images/start.png)
+
 NOTE 1: Ollama is currently not being used, since using smaller local models results in bad parsing. 
 
 ## Design

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./shared_functions.sh
+source ./scripts/shared_functions.sh
 
 stop_service() {
   local service="$1"
