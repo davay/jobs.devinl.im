@@ -1,14 +1,20 @@
 #!/bin/bash
 
-if [ -z "$ENVIRONMENT" ]; then
+if [ ! -f ./.env ]; then
   read -rp "Is this a production environment? (y/N): " production_choice
   if [[ "${production_choice,,}" =~ ^(y|yes)$ ]]; then
-    export ENVIRONMENT="production"
-    echo "Setting ENVIRONMENT=production"
+    echo "ENVIRONMENT=production" > ./.env
+    echo "Created .env with ENVIRONMENT=production"
+  else
+    # not technically checked, we default to dev mode in absence of production
+    # still creating .env so it stops asking
+    echo "ENVIRONMENT=development" > ./.env
+    echo "Created .env with ENVIRONMENT=development"
   fi
-else
-  echo "ENVIRONMENT is already set to: $ENVIRONMENT"
 fi
+
+export "$(grep -v '^#' ./.env | xargs)"
+echo "Using ENVIRONMENT=$ENVIRONMENT"
 
 find_services() {
   # only search one level deep (excluding root so it doesn't find itself)

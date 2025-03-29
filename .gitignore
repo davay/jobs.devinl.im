@@ -11,3 +11,6 @@ __pycache__
 # dev setup, only ignores them for our files that are exactly one dir deep
 /*/pid
 /*/log
+
+# .env is used to set ENVIRONMENT=production by the start script on first-time run
+.env
