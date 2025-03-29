@@ -21,6 +21,11 @@ reset_database(engine)
 seed_database(engine)
 
 
+@app.get("/")
+def hihi():
+    return "hihi"
+
+
 @app.get("/get_sources", response_model=List[SourceDTO])
 def get_sources():
     with Session(engine) as session:
