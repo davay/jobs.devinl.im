@@ -6,10 +6,13 @@ import Dashboard from '@/components/Dashboard'
 import Sources from '@/components/Sources'
 import Filters from '@/components/Filters'
 import { useState } from 'react'
+import { getFromStorage } from '@/lib/utils'
 
 
 function App() {
-  const [keywords, setKeywords] = useState<string[]>([])
+  const [keywords, setKeywords] = useState<string[]>(() =>
+    getFromStorage<string[]>('keywords', [])
+  );
   const routes = [
     { path: '/', element: <Dashboard keywords={keywords} /> },
     { path: '/sources', element: <Sources /> },

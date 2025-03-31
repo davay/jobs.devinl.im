@@ -8,6 +8,7 @@ import {
   CardContent
 } from '@/components/ui/card'
 import { X } from "lucide-react"
+import { saveToStorage } from "@/lib/utils"
 
 export default function Filters({ keywords, setKeywords }: FilterProps) {
   const [inputValue, setInputValue] = useState<string>()
@@ -17,14 +18,18 @@ export default function Filters({ keywords, setKeywords }: FilterProps) {
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (inputValue && e.key === 'Enter' && inputValue.trim() !== '') {
       if (!keywords.includes(inputValue.trim())) {
-        setKeywords([...keywords, inputValue.trim()])
+        const newKeywords = [...keywords, inputValue.trim()]
+        setKeywords(newKeywords)
+        saveToStorage('keywords', newKeywords);
         setInputValue('')
       }
       e.preventDefault()
     }
   }
   const removeKeyword = (keywordToRemove: string) => {
-    setKeywords(keywords.filter(keyword => keyword !== keywordToRemove))
+    const newKeywords = keywords.filter(keyword => keyword !== keywordToRemove)
+    setKeywords(newKeywords)
+    saveToStorage('keywords', newKeywords);
   }
 
   return (
