@@ -1,8 +1,10 @@
+import math
 import os
 from typing import List
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import func
 from sqlmodel import Session, col, desc, or_, select
 
 from database import get_engine
@@ -10,6 +12,7 @@ from models import (
     Category,
     Job,
     JobSearchParamsDTO,
+    JobSearchResponseDTO,
     JobSearchResultDTO,
     ScrapedJobDTO,
     SourceDTO,
@@ -91,10 +94,10 @@ def submit_jobs(jobs: list[ScrapedJobDTO]):
         }
 
 
-@app.post("/search_jobs", response_model=list[JobSearchResultDTO])
+@app.post("/search_jobs", response_model=JobSearchResponseDTO)
 def search_jobs(search_params: JobSearchParamsDTO):
     with Session(engine) as session:
-        result = []
+        results = []
         statement = select(Job).order_by(desc(Job.date))
 
         if search_params.keywords:
@@ -103,6 +106,13 @@ def search_jobs(search_params: JobSearchParamsDTO):
                 for keyword in search_params.keywords
             ]
             statement = statement.where(or_(*keyword_conditions))
+
+        count_query = select(func.count()).select_from(statement.subquery())
+        total_count = session.scalar(count_query)
+
+        total_pages = 1
+        if total_count:
+            total_pages = math.ceil(total_count / search_params.limit)
 
         statement = statement.offset(search_params.page * search_params.limit).limit(
             search_params.limit
@@ -122,6 +132,10 @@ def search_jobs(search_params: JobSearchParamsDTO):
                 date=job.date,
                 retrieval_date=job.retrieval_date,
             )
-            result.append(jobSearchResult)
+            results.append(jobSearchResult)
 
-        return result
+        jobSearchResponse = JobSearchResponseDTO(
+            results=results, total_pages=total_pages
+        )
+
+        return jobSearchResponse

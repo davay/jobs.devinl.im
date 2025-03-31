@@ -28,3 +28,8 @@ class JobSearchResultDTO(SQLModel):
     url: str
     date: str | None
     retrieval_date: str
+
+
+class JobSearchResponseDTO(SQLModel):
+    results: list[JobSearchResultDTO]
+    total_pages: int

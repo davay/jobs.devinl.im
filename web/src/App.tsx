@@ -7,8 +7,9 @@ import Sources from '@/components/Sources'
 import Filters from '@/components/Filters'
 import { useState } from 'react'
 
+
 function App() {
-  const [keywords, setKeywords] = useState<string[]>([]);
+  const [keywords, setKeywords] = useState<string[]>([])
   const routes = [
     { path: '/', element: <Dashboard keywords={keywords} /> },
     { path: '/sources', element: <Sources /> },

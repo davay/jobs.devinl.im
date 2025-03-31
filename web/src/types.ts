@@ -1,10 +1,15 @@
-export interface JobDTO {
+export interface JobSearchResultDTO {
   title: string
   company: string
   category: string
   url: string
   date: string
   retrieval_date: string
+}
+
+export interface JobSearchResponseDTO {
+  results: JobSearchResultDTO[]
+  total_pages: number
 }
 
 export interface SourceDTO {
@@ -24,7 +29,13 @@ export interface DashboardProps {
   keywords: string[]
 }
 
+export interface DashboardPaginationProps {
+  page: number
+  setPage: React.Dispatch<React.SetStateAction<number>>
+  totalPages: number
+}
+
 export interface FilterProps {
   keywords: string[];
-  setKeywords: React.Dispatch<React.SetStateAction<string[]>>;
+  setKeywords: React.Dispatch<React.SetStateAction<string[]>>
 }

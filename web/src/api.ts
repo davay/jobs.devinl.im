@@ -1,7 +1,7 @@
-import { JobDTO, SourceDTO, JobSearchParamsDTO } from '@/types'
+import { SourceDTO, JobSearchParamsDTO, JobSearchResponseDTO } from '@/types'
 
 const api = {
-  async searchJobs(jobSearchParams: JobSearchParamsDTO): Promise<JobDTO[]> {
+  async searchJobs(jobSearchParams: JobSearchParamsDTO): Promise<JobSearchResponseDTO> {
     const res = await fetch('api/search_jobs', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
