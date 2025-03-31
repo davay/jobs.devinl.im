@@ -13,7 +13,6 @@ export default function Navigation() {
   const navItems = [
     { path: '/', label: 'Dashboard' },
     { path: '/sources', label: 'Sources' },
-    { path: '/notification', label: 'Notification' }
   ]
 
   return (

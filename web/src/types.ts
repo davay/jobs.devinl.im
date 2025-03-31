@@ -14,3 +14,12 @@ export interface SourceDTO {
   url: string
 }
 
+export interface JobSearchParamsDTO {
+  keywords: string[]
+  page: number
+  limit: number
+}
+
+export interface DashboardProps {
+  keywords: string[]
+}

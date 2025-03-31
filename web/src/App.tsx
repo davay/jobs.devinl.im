@@ -4,12 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from '@/components/Navigation'
 import Dashboard from '@/components/Dashboard'
 import Sources from '@/components/Sources'
-import Notification from '@/components/Notification'
 
+const keywords: string[] = []
 const routes = [
-  { path: '/', element: <Dashboard /> },
+  { path: '/', element: <Dashboard keywords={keywords} /> },
   { path: '/sources', element: <Sources /> },
-  { path: '/notification', element: <Notification /> }
 ]
 
 function App() {

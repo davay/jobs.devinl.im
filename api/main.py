@@ -3,10 +3,17 @@ from typing import List
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from sqlmodel import Session, desc, select
+from sqlmodel import Session, col, desc, or_, select
 
 from database import get_engine
-from models import Category, Job, JobDTO, SourceDTO
+from models import (
+    Category,
+    Job,
+    JobSearchParamsDTO,
+    JobSearchResultDTO,
+    ScrapedJobDTO,
+    SourceDTO,
+)
 
 is_production = os.getenv("ENVIRONMENT") == "production"
 
@@ -51,7 +58,7 @@ def get_sources():
 
 # TODO: Response model
 @app.post("/submit_jobs")
-def submit_jobs(jobs: list[JobDTO]):
+def submit_jobs(jobs: list[ScrapedJobDTO]):
     with Session(engine) as session:
         results = {"created": [], "skipped": []}
         for job in jobs:
@@ -84,11 +91,22 @@ def submit_jobs(jobs: list[JobDTO]):
         }
 
 
-@app.get("/get_jobs")
-def get_jobs():
+@app.post("/search_jobs", response_model=list[JobSearchResultDTO])
+def search_jobs(search_params: JobSearchParamsDTO):
     with Session(engine) as session:
         result = []
         statement = select(Job).order_by(desc(Job.date))
+
+        if search_params.keywords:
+            keyword_conditions = [
+                col(Job.title).contains(keyword.strip().lower())
+                for keyword in search_params.keywords
+            ]
+            statement = statement.where(or_(*keyword_conditions))
+
+        statement = statement.offset(search_params.page * search_params.limit).limit(
+            search_params.limit
+        )
 
         jobs = session.exec(statement).all()
 
@@ -96,14 +114,14 @@ def get_jobs():
             raise HTTPException(status_code=404, detail="No jobs found")
 
         for job in jobs:
-            res = {
-                "title": job.title,
-                "company": job.category.company.name,  # type: ignore
-                "category": job.category.name,  # type: ignore
-                "url": job.category.url,  # type: ignore
-                "date": job.date,
-                "retrieval_date": job.retrieval_date,
-            }
-            result.append(res)
+            jobSearchResult = JobSearchResultDTO(
+                title=job.title,
+                company=job.category.company.name,  # type: ignore
+                category=job.category.name,  # type: ignore
+                url=job.category.url,  # type: ignore
+                date=job.date,
+                retrieval_date=job.retrieval_date,
+            )
+            result.append(jobSearchResult)
 
         return result

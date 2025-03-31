@@ -8,8 +8,23 @@ class SourceDTO(SQLModel):
     url: str
 
 
-class JobDTO(SQLModel):
+class ScrapedJobDTO(SQLModel):
     title: str
     category_id: int
     date: str
+    retrieval_date: str
+
+
+class JobSearchParamsDTO(SQLModel):
+    keywords: list[str]
+    page: int
+    limit: int
+
+
+class JobSearchResultDTO(SQLModel):
+    title: str
+    company: str
+    category: str
+    url: str
+    date: str | None
     retrieval_date: str

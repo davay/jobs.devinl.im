@@ -9,7 +9,4 @@
             - KeywordFilter
             - CompanyCard(Card)
         - Notifications
-
-## Shared Components
-
-- Card
+            - TODO

@@ -7,18 +7,24 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { useState, useEffect } from 'react'
-import { JobDTO } from '@/types'
+import { JobDTO, JobSearchParamsDTO, DashboardProps } from '@/types'
 
-export default function Dashboard() {
+export default function Dashboard({ keywords }: DashboardProps) {
   const [jobs, setJobs] = useState<JobDTO[]>([])
 
   useEffect(() => {
-    api.getJobs()
+    const jobSearchParams: JobSearchParamsDTO = {
+      keywords: keywords,
+      page: 1,
+      limit: 12 // try multiples of 6, to keep even # of rows in all layouts
+    };
+
+    api.searchJobs(jobSearchParams)
       .then(jobsData => setJobs(jobsData))
       .catch(err => {
         console.error('Failed to fetch jobs:', err);
       })
-  }, []);
+  }, [keywords]);
 
   return (
     <div>
