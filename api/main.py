@@ -99,7 +99,7 @@ def search_jobs(search_params: JobSearchParamsDTO):
 
         if search_params.keywords:
             keyword_conditions = [
-                col(Job.title).contains(keyword.strip().lower())
+                col(Job.title).ilike(f"%{keyword.strip()}%")
                 for keyword in search_params.keywords
             ]
             statement = statement.where(or_(*keyword_conditions))
