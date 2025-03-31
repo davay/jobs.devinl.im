@@ -1,3 +1,5 @@
+# THIS README IS A LITTLE OUT OF DATE!!
+
 ## Description
 
 While applying, it's good to apply to recently posted jobs but searching for them manually across multiple sites gets old. 
@@ -61,6 +63,5 @@ Design choices:
 
 ## TODO 
 
-- setup page hashing, useful for sites that dont show date, we can use date first seen on refresh
 - Fix docs to mention crawl4ai instead of llm-scraper
 - Update docs architectures and guide

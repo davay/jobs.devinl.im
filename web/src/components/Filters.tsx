@@ -36,7 +36,7 @@ export default function Filters({ keywords, setKeywords }: FilterProps) {
     <div>
       <div className="pb-2">
         <h1 className="font-bold text-lg text-left pl-1 py-2">Keywords</h1>
-        <p className="text-left text-sm pl-1 pb-2">This will be used to filter job titles. Multiple keywords are processed with an "OR".</p>
+        <p className="text-left text-sm pl-1 pb-2">This will be used to filter job titles. Multiple keywords are processed with an "OR". Return to the Dashboard to see filtered results.</p>
         <Input
           type="text"
           placeholder='E.g., "engineer", "project manager", "ml"'
