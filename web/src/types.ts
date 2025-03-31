@@ -23,3 +23,8 @@ export interface JobSearchParamsDTO {
 export interface DashboardProps {
   keywords: string[]
 }
+
+export interface FilterProps {
+  keywords: string[];
+  setKeywords: React.Dispatch<React.SetStateAction<string[]>>;
+}

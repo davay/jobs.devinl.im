@@ -1,7 +1,6 @@
 import { JobDTO, SourceDTO, JobSearchParamsDTO } from '@/types'
 
-const api =
-{
+const api = {
   async searchJobs(jobSearchParams: JobSearchParamsDTO): Promise<JobDTO[]> {
     const res = await fetch('api/search_jobs', {
       method: "POST",

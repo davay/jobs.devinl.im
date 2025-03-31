@@ -8,7 +8,7 @@ import {
 import { useState, useEffect } from 'react'
 import { SourceDTO } from '@/types'
 
-export default function Dashboard() {
+export default function Sources() {
   const [sources, setSources] = useState<SourceDTO[]>([])
 
   useEffect(() => {

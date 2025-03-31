@@ -4,20 +4,22 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from '@/components/Navigation'
 import Dashboard from '@/components/Dashboard'
 import Sources from '@/components/Sources'
-
-const keywords: string[] = []
-const routes = [
-  { path: '/', element: <Dashboard keywords={keywords} /> },
-  { path: '/sources', element: <Sources /> },
-]
+import Filters from '@/components/Filters'
+import { useState } from 'react'
 
 function App() {
+  const [keywords, setKeywords] = useState<string[]>([]);
+  const routes = [
+    { path: '/', element: <Dashboard keywords={keywords} /> },
+    { path: '/sources', element: <Sources /> },
+    { path: '/filters', element: <Filters keywords={keywords} setKeywords={setKeywords} /> },
+  ]
 
   return (
     <div>
       <BrowserRouter>
         <div className="min-h-screen flex flex-col items-center">
-          <div className="w-[75vw]">
+          <div className="w-[75vw] max-w-[1200px]">
             <Navigation />
             <div className="pt-4">
               <Routes>
