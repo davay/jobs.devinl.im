@@ -5,12 +5,13 @@ from typing import List
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy import func
-from sqlmodel import Session, case, col, desc, or_, select
+from sqlalchemy import delete, func, nullslast
+from sqlmodel import Session, asc, col, desc, or_, select
 
 from database import get_engine
 from models import (
     Category,
+    Company,
     Job,
     JobSearchParamsDTO,
     JobSearchResponseDTO,
@@ -42,7 +43,15 @@ def get_sources():
     with Session(engine) as session:
         result = []
 
-        statement = select(Category)
+        statement = (
+            select(Category)
+            .where(Category.company_id == Company.id)
+            .order_by(
+                asc(Company.name),
+                desc(Category.name),
+            )
+        )
+
         categories = session.exec(statement).all()
 
         if not categories:
@@ -54,8 +63,10 @@ def get_sources():
             last_refreshed_string = "Never"
             if category.last_refreshed:
                 last_refreshed_delta = current_time - category.last_refreshed
-                hours_ago = int(last_refreshed_delta.total_seconds() / 3600)
-                last_refreshed_string = f"{hours_ago} hours ago"
+                total_seconds = int(last_refreshed_delta.total_seconds())
+                hours = total_seconds // 3600
+                minutes = (total_seconds % 3600) // 60
+                last_refreshed_string = f"{hours}h {minutes}m ago"
 
             data = {
                 # ignored err, company is guaranteed to exist by design, sqlmodel quirk forces optional type in definition
@@ -75,8 +86,18 @@ def submit_jobs(jobs: list[ScrapedJobDTO], first_batch: bool = False):
     with Session(engine) as session:
         submit_jobs_response = SubmitJobsResponseDTO(created_count=0)
 
+        # v1, this works
+        # if first_batch:
+        #     statement = select(Job)
+        #     existing_jobs = session.exec(statement).all()
+        #     for job in existing_jobs:
+        #         session.delete(job)
+        #     session.commit()
+
+        # v2, this has type error, but i dont have to loop...
         if first_batch:
-            session.delete(Job)
+            statement = delete(Job)
+            session.exec(statement)  # type: ignore
             session.commit()
 
         updated_categories = set()
@@ -111,7 +132,17 @@ def search_jobs(search_params: JobSearchParamsDTO):
     with Session(engine) as session:
         results = []
 
-        statement = select(Job).order_by(desc(Job.date))
+        # unknown dates go behind
+        statement = (
+            select(Job)
+            .where(Job.category_id == Category.id)
+            .where(Category.company_id == Company.id)
+            .order_by(
+                nullslast(desc(Job.date)),
+                asc(Company.name),
+                desc(Category.last_refreshed),
+            )
+        )
 
         if search_params.keywords:
             keyword_conditions = [
@@ -139,7 +170,10 @@ def search_jobs(search_params: JobSearchParamsDTO):
         current_time = datetime.now()
         for job in jobs:
             last_refreshed_delta = current_time - job.category.last_refreshed  # type: ignore
-            hours_ago = int(last_refreshed_delta.total_seconds() / 3600)
+            total_seconds = int(last_refreshed_delta.total_seconds())
+            hours = total_seconds // 3600
+            minutes = (total_seconds % 3600) // 60
+            last_refreshed_string = f"{hours}h {minutes}m ago"
 
             jobSearchResult = JobSearchResultDTO(
                 title=job.title,
@@ -147,7 +181,7 @@ def search_jobs(search_params: JobSearchParamsDTO):
                 category=job.category.name,  # type: ignore
                 url=job.category.url,  # type: ignore
                 date=job.date,
-                last_refreshed=f"{hours_ago} hours ago",
+                last_refreshed=last_refreshed_string,
             )
             results.append(jobSearchResult)
 
