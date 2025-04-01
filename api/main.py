@@ -126,7 +126,7 @@ def submit_jobs(jobs: list[ScrapedJobDTO]):
                 session.add(new_job)
                 session.commit()
                 submit_jobs_response.created_count += 1
-                updated_categories.add(job.category_id)
+            updated_categories.add(job.category_id)
 
         # update each category's last_refreshed date only once
         current_time = datetime.now()

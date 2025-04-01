@@ -49,8 +49,8 @@ export default function Dashboard({ keywords }: DashboardProps) {
     <div className="flex flex-col min-h-screen">
       <div className="flex-grow">
         <h1 className="font-bold text-lg text-left pl-1 py-2">Recent Job Postings</h1>
-        <p className="text-left text-sm pl-1 pb-2">All jobs here are pulled direct from company sites (only) within the last 18-24 hours (randomized). Clicking on a card will bring you to the page where the job was found, not to the job itself.</p>
-        <p className="text-left text-sm pl-1 pb-2">Note: If the job posting doesn't have a date, it will be placed behind those with dates then sorted by last refresh time.</p>
+        <p className="text-left text-sm pl-1 pb-2">All jobs are pulled directly from company sites within the last 24 hours (randomized). Clicking on a card brings you to the page where the job was found, not to the job itself.</p>
+        <p className="text-left text-sm pl-1 pb-2">Note: If the job posting doesn't have a date, it will be placed behind all others with a date.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {jobs.map((job, index) => (
             <a key={index} href={job.url} target="_blank">
