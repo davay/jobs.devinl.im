@@ -35,12 +35,14 @@ async def crawl(crawler, url, crawler_config):
         config=crawler_config,
     )
     if not result.success:
+        print(f"Crawl error: {result.status_code}")
         raise Exception("Crawl error")
 
     contents: List[dict] = json.loads(result.extracted_content)
 
     for content in contents:
         if content["error"]:
+            print(f"Crawl error: {content}")
             raise Exception("Crawl error")
     else:
         return contents
@@ -71,7 +73,7 @@ async def main():
             extraction_type="schema",
             input_format="fit_markdown",
             llm_config=LLMConfig(
-                provider="anthropic/claude-3-5-haiku-latest",
+                provider="anthropic/claude-3-7-sonnet-latest",
                 api_token=os.environ.get("ANTHROPIC_API_KEY"),
             ),
             instruction=f"""Extract from each job posting:
