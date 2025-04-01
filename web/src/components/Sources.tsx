@@ -27,8 +27,8 @@ export default function Sources() {
         Note: Where possible, all sources are exclusively filtered to jobs within the U.S. (excluding some smaller companies, but majority of their jobs are within the U.S. anyway).</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {sources.map((source, index) => (
-          <a href={source.url} target="_blank">
-            <Card key={index} className="h-full">
+          <a key={index} href={source.url} target="_blank">
+            <Card className="h-full">
               <CardHeader>
                 <CardTitle>{source.company_name}</CardTitle>
                 <CardDescription>{source.category_name}</CardDescription>
@@ -36,9 +36,9 @@ export default function Sources() {
                   <CardDescription className="break-all">{source.url}</CardDescription>
                 </div>
                 <CardDescription className="text-xs mt-2">
-                  {source.last_refreshed 
-                    ? `Last refreshed: ${new Date(source.last_refreshed).toLocaleString()}` 
-                    : 'Not yet refreshed'}
+                  {source.last_refreshed
+                    ? `Last refreshed: ${source.last_refreshed}`
+                    : 'Last refreshed: never'}
                 </CardDescription>
               </CardHeader>
             </Card>

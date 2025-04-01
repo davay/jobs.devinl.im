@@ -28,10 +28,17 @@ def seed_database(engine):
             session.add(company)
             session.commit()
 
+            categories = []
             for category_source in company_source.categories:
-                category = Category(name=category_source.name, url=category_source.url)
-                session.add(category)
-                session.commit()
+                category = Category(
+                    name=category_source.name,
+                    url=category_source.url,
+                    company_id=company.id,
+                )
+                categories.append(category)
+
+            session.add_all(categories)
+            session.commit()
 
 
 def reset_database(engine):

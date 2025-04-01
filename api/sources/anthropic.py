@@ -1,6 +1,6 @@
 from .base import CategorySource, CompanySource
 
-apple_sources = CompanySource(
+anthropic_sources = CompanySource(
     name="Anthropic",
     categories=[
         CategorySource(

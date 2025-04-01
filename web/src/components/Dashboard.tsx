@@ -7,6 +7,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { useState, useEffect } from 'react'
+import { parseISO, format } from 'date-fns'
 import { JobSearchResultDTO, JobSearchResponseDTO, JobSearchParamsDTO, DashboardProps } from '@/types'
 import DashboardPagination from '@/components/DashboardPagination'
 
@@ -33,12 +34,23 @@ export default function Dashboard({ keywords }: DashboardProps) {
       })
   }, [keywords, page]);
 
+  const formatReadableDate = (dateString: string) => {
+    try {
+      const date = parseISO(dateString);
+      return format(date, 'MMMM d, yyyy');
+    } catch (error) {
+      console.error('Error formatting date:', error);
+      return dateString;
+    }
+  };
+
 
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex-grow">
         <h1 className="font-bold text-lg text-left pl-1 py-2">Recent Job Postings</h1>
-        <p className="text-left text-sm pl-1 pb-2">Clicking on a card will bring you to the page where the job was found, not to the job itself.</p>
+        <p className="text-left text-sm pl-1 pb-2">All jobs here are pulled direct from company sites every 6 hours. Clicking on a card will bring you to the page where the job was found, not to the job itself.</p>
+        <p className="text-left text-sm pl-1 pb-2">Note: Many companies do not specify the post date, in such cases they will be sorted according to the refresh time.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {jobs.map((job, index) => (
             <a key={index} href={job.url} target="_blank">
@@ -46,10 +58,10 @@ export default function Dashboard({ keywords }: DashboardProps) {
                 <CardHeader>
                   <CardTitle>{job.title}</CardTitle>
                   <CardDescription>{job.company} | {job.category}</CardDescription>
+                  <CardDescription>Last refreshed: {job.last_refreshed}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>Posted on: {job.date}</CardDescription>
-                  <CardDescription>Seen on: {job.last_refreshed}</CardDescription>
+                  <CardDescription>Posted on: {formatReadableDate(job.date)}</CardDescription>
                 </CardContent>
               </Card>
             </a>

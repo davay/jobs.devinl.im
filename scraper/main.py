@@ -29,6 +29,7 @@ async def main():
     submit_jobs_url = f"{api_url}/submit_jobs"
     today = datetime.today().date()
     today_str = today.isoformat()
+    now_str = datetime.now().isoformat()
 
     pruning_filter = PruningContentFilter()  # type: ignore
     md_generator = DefaultMarkdownGenerator(content_filter=pruning_filter)
@@ -55,7 +56,7 @@ async def main():
                - For "Yesterday" use "{(today - timedelta(days=1)).isoformat()}"
                - For "X days ago" calculate from current date
 
-            Use "N/A" for any missing information.
+            Use "None" for any missing information.
             """,
         ),
     )
@@ -64,6 +65,8 @@ async def main():
     sources = get_sources_response.json()
 
     browser_config = BrowserConfig(browser_type="firefox", headless=True, verbose=True)  # type: ignore
+    first_batch = True
+
     async with AsyncWebCrawler(config=browser_config) as crawler:  # type: ignore
         for source in sources:
             jobs = []
@@ -94,10 +97,13 @@ async def main():
                 job["title"] = content["title"]
                 job["category_id"] = int(source["category_id"])
                 job["date"] = content["date"]
-                job["last_refreshed"] = today_str
+                job["last_refreshed"] = now_str
                 jobs.append(job)
 
-            requests.post(url=submit_jobs_url, json=jobs)
+            requests.post(
+                url=submit_jobs_url, json=jobs, params={"batch_mode": not first_batch}
+            )
+            first_batch = False
 
 
 if __name__ == "__main__":

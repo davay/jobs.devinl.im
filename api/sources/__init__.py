@@ -1,4 +1,5 @@
 from .amazon import amazon_sources
+from .anthropic import anthropic_sources
 from .apple import apple_sources
 from .meta import meta_sources
 from .microsoft import microsoft_sources
@@ -6,6 +7,7 @@ from .nvidia import nvidia_sources
 
 all_sources = [
     amazon_sources,
+    anthropic_sources,
     apple_sources,
     microsoft_sources,
     nvidia_sources,
