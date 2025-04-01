@@ -106,7 +106,11 @@ def submit_jobs(jobs: list[ScrapedJobDTO]):
 
             cleaned_date = None
             if job.date and job.date != "None":
-                cleaned_date = datetime.fromisoformat(job.date)
+                try:
+                    cleaned_date = datetime.fromisoformat(job.date)
+                except Exception as e:
+                    print(f"Error {e} while submitting job: {job}")
+                    pass
 
             new_job = Job(
                 title=job.title,
@@ -114,6 +118,7 @@ def submit_jobs(jobs: list[ScrapedJobDTO]):
                 date=cleaned_date,
             )
             session.add(new_job)
+            session.commit()
             submit_jobs_response.created_count += 1
             updated_categories.add(job.category_id)
 
