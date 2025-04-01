@@ -104,15 +104,29 @@ def submit_jobs(jobs: list[ScrapedJobDTO]):
                     print(f"Error {e} while submitting job: {job}")
                     pass
 
-            new_job = Job(
-                title=job.title,
-                category_id=job.category_id,
-                date=cleaned_date,
+            category = session.get(Category, job.category_id)
+            if not category:
+                continue
+
+            statement = (
+                select(Job)
+                .where(Job.category_id == job.category_id)
+                .where(Job.title == job.title)
+                .where(Job.date == cleaned_date)
             )
-            session.add(new_job)
-            session.commit()
-            submit_jobs_response.created_count += 1
-            updated_categories.add(job.category_id)
+
+            existing_job = session.exec(statement).first()
+
+            if not existing_job:
+                new_job = Job(
+                    title=job.title,
+                    category_id=job.category_id,
+                    date=cleaned_date,
+                )
+                session.add(new_job)
+                session.commit()
+                submit_jobs_response.created_count += 1
+                updated_categories.add(job.category_id)
 
         # update each category's last_refreshed date only once
         current_time = datetime.now()
