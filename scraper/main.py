@@ -34,6 +34,9 @@ async def main():
     pruning_filter = PruningContentFilter()  # type: ignore
     md_generator = DefaultMarkdownGenerator(content_filter=pruning_filter)
     crawler_config = CrawlerRunConfig(  # type: ignore
+        magic=True,
+        simulate_user=True,
+        override_navigator=True,
         markdown_generator=md_generator,
         delay_before_return_html=5,
         word_count_threshold=1,
