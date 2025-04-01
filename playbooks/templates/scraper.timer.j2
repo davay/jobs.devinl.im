@@ -5,7 +5,8 @@ Requires={{ service_name }}.service
 [Timer]
 Unit={{ service_name }}.service
 OnBootSec=5min
-OnUnitActiveSec=12h
+OnUnitActiveSec=18h
+RandomizedDelaySec=6h
 
 [Install]
 WantedBy=timers.target
