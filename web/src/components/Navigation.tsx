@@ -6,7 +6,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
-import { Github } from "lucide-react"
+import { Github, FileText } from "lucide-react"
 
 export default function Navigation() {
   const location = useLocation()
@@ -34,15 +34,24 @@ export default function Navigation() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <a
-        href="https://github.com/davay/jobs.devinl.im"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center hover:text-gray-700"
-      >
-        <Github size={24} />
-      </a>
+      <div className="flex items-center gap-4">
+        <a
+          href="https://devinl.im/project/2025/04/01/jobs/"
+          className="flex items-center gap-1 text-sm font-medium hover:text-gray-700"
+        >
+          <FileText size={20} />
+          <span className="hidden md:inline">Blog</span>
+        </a>
 
+        <a
+          href="https://github.com/davay/jobs.devinl.im"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center hover:text-gray-700"
+        >
+          <Github size={24} />
+        </a>
+      </div>
     </div>
   )
 }
