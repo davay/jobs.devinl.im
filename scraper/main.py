@@ -28,16 +28,22 @@ class Job(BaseModel):
     date: str = Field(..., description="Job posting date or last updated date")
 
 
-@retry(stop=stop_after_attempt(4), wait=wait_exponential(multiplier=1, min=2, max=16))
+@retry(stop=stop_after_attempt(4), wait=wait_exponential(multiplier=1, min=4, max=64))
 async def crawl(crawler, url, crawler_config):
     result = await crawler.arun(
         url=url,
         config=crawler_config,
     )
     if not result.success:
-        raise Exception(f"Error: {result.status_code}")
+        raise Exception("Crawl error")
+
+    contents: List[dict] = json.loads(result.extracted_content)
+
+    for content in contents:
+        if content["error"]:
+            raise Exception("Crawl error")
     else:
-        return result
+        return contents
 
 
 async def main():
@@ -89,42 +95,39 @@ async def main():
         for source in sources:
             jobs = []
 
-            result = await crawl(crawler, source["url"], crawler_config)
+            contents = await crawl(crawler, source["url"], crawler_config)
 
-            ### FOR TESTING ###
-            # with open("raw_html.txt", "w") as file:
-            #     file.write(result.html)
-            # with open("cleaned_html.txt", "w") as file:
-            #     file.write(result.cleaned_html)
-            #
-            # markdown = result.markdown
-            # with open("raw_markdown.txt", "w") as file:
-            #     file.write(markdown.raw_markdown)
-            # with open("filtered_markdown.txt", "w") as file:
-            #     file.write(markdown.fit_markdown)
-            # with open("filtered_html.txt", "w") as file:
-            #     file.write(markdown.fit_html)
-            # with open("result.txt", "w") as file:
-            #     file.write(result.extracted_content)
+            for content in contents:
+                try:
+                    job = {}
+                    job["title"] = content["title"]
+                    job["category_id"] = int(source["category_id"])
+                    job["date"] = content["date"]
+                    job["last_refreshed"] = now_str
+                    jobs.append(job)
+                except Exception as e:
+                    print(f"Error processing job: {e}, content: {content}")
+                    continue
 
-            try:
-                contents: List[dict] = json.loads(result.extracted_content)
-                for content in contents:
-                    try:
-                        job = {}
-                        job["title"] = content["title"]
-                        job["category_id"] = int(source["category_id"])
-                        job["date"] = content["date"]
-                        job["last_refreshed"] = now_str
-                        jobs.append(job)
-                    except Exception as e:
-                        print(f"Error processing job: {e}, content: {content}")
-                        continue
-
-                requests.post(url=submit_jobs_url, json=jobs)
-            except Exception as e:
-                print(f"Error {e} while parsing json from: {result.extracted_content}")
+            requests.post(url=submit_jobs_url, json=jobs)
 
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
+### FOR TESTING ###
+# with open("raw_html.txt", "w") as file:
+#     file.write(result.html)
+# with open("cleaned_html.txt", "w") as file:
+#     file.write(result.cleaned_html)
+#
+# markdown = result.markdown
+# with open("raw_markdown.txt", "w") as file:
+#     file.write(markdown.raw_markdown)
+# with open("filtered_markdown.txt", "w") as file:
+#     file.write(markdown.fit_markdown)
+# with open("filtered_html.txt", "w") as file:
+#     file.write(markdown.fit_html)
+# with open("result.txt", "w") as file:
+#     file.write(result.extracted_content)
