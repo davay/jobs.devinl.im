@@ -48,9 +48,10 @@ def get_sources():
         if not categories:
             raise HTTPException(status_code=404, detail="No categories found")
 
+        # comparison happens on server because i dont want to deal with timezones
         current_time = datetime.now()
         for category in categories:
-            last_refreshed_string = "never"
+            last_refreshed_string = "Never"
             if category.last_refreshed:
                 last_refreshed_delta = current_time - category.last_refreshed
                 hours_ago = int(last_refreshed_delta.total_seconds() / 3600)

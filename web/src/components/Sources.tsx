@@ -1,6 +1,7 @@
 import api from '@/api'
 import {
   Card,
+  CardContent,
   CardHeader,
   CardDescription,
   CardTitle
@@ -35,12 +36,12 @@ export default function Sources() {
                 <div className="h-20 overflow-y-auto">
                   <CardDescription className="break-all">{source.url}</CardDescription>
                 </div>
-                <CardDescription className="text-xs mt-2">
-                  {source.last_refreshed
-                    ? `Last refreshed: ${source.last_refreshed}`
-                    : 'Last refreshed: never'}
-                </CardDescription>
               </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Last refreshed: {source.last_refreshed}
+                </CardDescription>
+              </CardContent>
             </Card>
           </a>
         ))}
