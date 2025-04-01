@@ -86,15 +86,7 @@ def submit_jobs(jobs: list[ScrapedJobDTO]):
     with Session(engine) as session:
         submit_jobs_response = SubmitJobsResponseDTO(created_count=0)
 
-        # v1, this works
-        # if first_batch:
-        #     statement = select(Job)
-        #     existing_jobs = session.exec(statement).all()
-        #     session.delete(existing_jobs)
-        #     session.commit()
-
-        # v2, delete all jobs from first encounter of a category
-        # should feel less awkward during refresh times
+        # replace jobs category by category
         updated_categories = set()
         for job in jobs:
             if job.category_id not in updated_categories:
@@ -151,10 +143,16 @@ def search_jobs(search_params: JobSearchParamsDTO):
         )
 
         if search_params.keywords:
-            keyword_conditions = [
-                col(Job.title).ilike(f"%{keyword.strip()}%")
-                for keyword in search_params.keywords
-            ]
+            keyword_conditions = []
+            for keyword in search_params.keywords:
+                keyword_str = f"%{keyword.strip()}%"
+                keyword_conditions.extend(
+                    [
+                        col(Job.title).ilike(keyword_str),
+                        col(Company.name).ilike(keyword_str),
+                    ]
+                )
+
             statement = statement.where(or_(*keyword_conditions))
 
         count_query = select(func.count()).select_from(statement.subquery())

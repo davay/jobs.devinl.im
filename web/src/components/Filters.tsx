@@ -39,7 +39,7 @@ export default function Filters({ keywords, setKeywords }: FilterProps) {
         <p className="text-left text-sm pl-1 pb-2">This will be used to filter job titles. Multiple keywords are processed with an "OR". Return to the Dashboard to see filtered results.</p>
         <Input
           type="text"
-          placeholder='E.g., "engineer", "project manager", "ml"'
+          placeholder='E.g., "engineer", "microsoft", "ml"'
           value={inputValue}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
