@@ -65,7 +65,6 @@ async def main():
     sources = get_sources_response.json()
 
     browser_config = BrowserConfig(browser_type="firefox", headless=True, verbose=True)  # type: ignore
-    first_batch = True
 
     async with AsyncWebCrawler(config=browser_config) as crawler:  # type: ignore
         for source in sources:
@@ -93,17 +92,18 @@ async def main():
 
             contents: List(dict) = json.loads(result.extracted_content)  # type: ignore
             for content in contents:
-                job = {}
-                job["title"] = content["title"]
-                job["category_id"] = int(source["category_id"])
-                job["date"] = content["date"]
-                job["last_refreshed"] = now_str
-                jobs.append(job)
+                try:
+                    job = {}
+                    job["title"] = content["title"]
+                    job["category_id"] = int(source["category_id"])
+                    job["date"] = content["date"]
+                    job["last_refreshed"] = now_str
+                    jobs.append(job)
+                except Exception as e:
+                    print(f"Error processing job: {e}, content: {content}")
+                    continue
 
-            requests.post(
-                url=submit_jobs_url, json=jobs, params={"batch_mode": not first_batch}
-            )
-            first_batch = False
+            requests.post(url=submit_jobs_url, json=jobs)
 
 
 if __name__ == "__main__":

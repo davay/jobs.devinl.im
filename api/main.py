@@ -5,7 +5,7 @@ from typing import List
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy import delete, func, nullslast
+from sqlalchemy import func, nullslast
 from sqlmodel import Session, asc, col, desc, or_, select
 
 from database import get_engine
@@ -82,7 +82,7 @@ def get_sources():
 
 
 @app.post("/submit_jobs", response_model=SubmitJobsResponseDTO)
-def submit_jobs(jobs: list[ScrapedJobDTO], first_batch: bool = False):
+def submit_jobs(jobs: list[ScrapedJobDTO]):
     with Session(engine) as session:
         submit_jobs_response = SubmitJobsResponseDTO(created_count=0)
 
@@ -90,19 +90,20 @@ def submit_jobs(jobs: list[ScrapedJobDTO], first_batch: bool = False):
         # if first_batch:
         #     statement = select(Job)
         #     existing_jobs = session.exec(statement).all()
-        #     for job in existing_jobs:
-        #         session.delete(job)
+        #     session.delete(existing_jobs)
         #     session.commit()
 
-        # v2, this has type error, but i dont have to loop...
-        if first_batch:
-            statement = delete(Job)
-            session.exec(statement)  # type: ignore
-            session.commit()
-
+        # v2, delete all jobs from first encounter of a category
+        # should feel less awkward during refresh times
         updated_categories = set()
-
         for job in jobs:
+            if job.category_id not in updated_categories:
+                statement = select(Job).where(Job.category_id == job.category_id)
+                existing_jobs = session.exec(statement).all()
+                for existing_job in existing_jobs:
+                    session.delete(existing_job)
+                session.commit()
+
             cleaned_date = None
             if job.date and job.date != "None":
                 cleaned_date = datetime.fromisoformat(job.date)
