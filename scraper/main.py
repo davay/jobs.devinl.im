@@ -65,8 +65,8 @@ async def main():
 
     browser_config = BrowserConfig(browser_type="firefox", headless=True, verbose=True)  # type: ignore
     async with AsyncWebCrawler(config=browser_config) as crawler:  # type: ignore
-        jobs = []
         for source in sources:
+            jobs = []
             result = await crawler.arun(
                 url=source["url"],
                 config=crawler_config,
@@ -94,11 +94,10 @@ async def main():
                 job["title"] = content["title"]
                 job["category_id"] = int(source["category_id"])
                 job["date"] = content["date"]
-                job["retrieval_date"] = today_str
+                job["last_refreshed"] = today_str
                 jobs.append(job)
 
-        submit_jobs_response = requests.post(url=submit_jobs_url, json=jobs)
-        print(submit_jobs_response.json())
+            requests.post(url=submit_jobs_url, json=jobs)
 
 
 if __name__ == "__main__":

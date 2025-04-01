@@ -4,7 +4,7 @@ export interface JobSearchResultDTO {
   category: string
   url: string
   date: string
-  retrieval_date: string
+  last_refreshed: string
 }
 
 export interface JobSearchResponseDTO {
@@ -17,6 +17,7 @@ export interface SourceDTO {
   category_id: number
   category_name: string
   url: string
+  last_refreshed?: string
 }
 
 export interface JobSearchParamsDTO {

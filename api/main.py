@@ -1,5 +1,6 @@
 import math
 import os
+from datetime import datetime
 from typing import List
 
 from fastapi import FastAPI, HTTPException
@@ -16,6 +17,7 @@ from models import (
     JobSearchResultDTO,
     ScrapedJobDTO,
     SourceDTO,
+    SubmitJobsResponseDTO,
 )
 
 is_production = os.getenv("ENVIRONMENT") == "production"
@@ -53,45 +55,40 @@ def get_sources():
                 "category_id": category.id,
                 "category_name": category.name,
                 "url": category.url,
+                "last_refreshed": category.last_refreshed,
             }
             result.append(data)
 
         return result
 
 
-# TODO: Response model
-@app.post("/submit_jobs")
+@app.post("/submit_jobs", response_model=SubmitJobsResponseDTO)
 def submit_jobs(jobs: list[ScrapedJobDTO]):
     with Session(engine) as session:
-        results = {"created": [], "skipped": []}
+        submit_jobs_response = SubmitJobsResponseDTO(created_count=0)
+        session.delete(Job)
+
+        updated_categories = set()
+
         for job in jobs:
-            # statement = select(Job).where(Job.category.company.id == job.company_id)  # type: ignore
-            statement = (
-                select(Job)
-                .join(Job.category)  # type: ignore
-                .where(Category.id == job.category_id)
-                .where(Job.title == job.title)
-                .where(Job.date == job.date)
+            new_job = Job(
+                title=job.title,
+                category_id=job.category_id,
+                date=job.date,
             )
-            if session.exec(statement).first():
-                results["skipped"].append(job)
-            else:
-                new_job = Job(
-                    title=job.title,
-                    category_id=job.category_id,
-                    date=job.date,
-                    retrieval_date=job.retrieval_date,
-                )
-                session.add(new_job)
-                results["created"].append(job)
+            session.add(new_job)
+            submit_jobs_response.created_count += 1
+            updated_categories.add(job.category_id)
+
+        # update each category's last_refreshed date only once
+        current_time = datetime.now()
+        for category_id in updated_categories:
+            category = session.get(Category, category_id)
+            if category:
+                category.last_refreshed = current_time
 
         session.commit()
-
-        return {
-            "created_count": len(results["created"]),
-            "skipped_count": len(results["skipped"]),
-            "results": results,
-        }
+        return submit_jobs_response
 
 
 @app.post("/search_jobs", response_model=JobSearchResponseDTO)
@@ -130,7 +127,7 @@ def search_jobs(search_params: JobSearchParamsDTO):
                 category=job.category.name,  # type: ignore
                 url=job.category.url,  # type: ignore
                 date=job.date,
-                retrieval_date=job.retrieval_date,
+                last_refreshed=job.category.last_refreshed,  # type: ignore
             )
             results.append(jobSearchResult)
 

@@ -14,5 +14,4 @@ class Job(SQLModel, table=True):
     )
     title: str = Field(index=True)
     date: str | None = None
-    retrieval_date: str
     category: Optional["Category"] = Relationship(back_populates="jobs")

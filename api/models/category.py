@@ -1,4 +1,5 @@
 from typing import TYPE_CHECKING, Optional
+from datetime import datetime
 
 from sqlmodel import Field, Relationship, SQLModel
 
@@ -15,5 +16,6 @@ class Category(SQLModel, table=True):
     )
     name: str = Field(index=True)
     url: str
+    last_refreshed: datetime | None = Field(default=None)
     company: Optional["Company"] = Relationship(back_populates="categories")
     jobs: list["Job"] = Relationship(back_populates="category")

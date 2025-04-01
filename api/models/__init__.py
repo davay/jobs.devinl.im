@@ -6,5 +6,6 @@ from .dtos import (
     JobSearchResultDTO,
     ScrapedJobDTO,
     SourceDTO,
+    SubmitJobsResponseDTO,
 )
 from .job import Job

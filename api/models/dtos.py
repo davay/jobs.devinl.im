@@ -1,3 +1,6 @@
+from datetime import datetime
+from typing import Optional
+
 from sqlmodel import SQLModel
 
 
@@ -6,13 +9,17 @@ class SourceDTO(SQLModel):
     category_id: int  # to be passed back after scraping
     category_name: str  # for display
     url: str
+    last_refreshed: Optional[datetime] = None
 
 
 class ScrapedJobDTO(SQLModel):
     title: str
     category_id: int
     date: str
-    retrieval_date: str
+
+
+class SubmitJobsResponseDTO(SQLModel):
+    created_count: int
 
 
 class JobSearchParamsDTO(SQLModel):
@@ -27,7 +34,7 @@ class JobSearchResultDTO(SQLModel):
     category: str
     url: str
     date: str | None
-    retrieval_date: str
+    last_refreshed: Optional[datetime] = None
 
 
 class JobSearchResponseDTO(SQLModel):
