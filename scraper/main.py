@@ -16,11 +16,28 @@ from crawl4ai.content_filter_strategy import PruningContentFilter
 from crawl4ai.extraction_strategy import LLMExtractionStrategy
 from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
 from pydantic import BaseModel, Field
+from tenacity import (
+    retry,
+    stop_after_attempt,
+    wait_exponential,
+)
 
 
 class Job(BaseModel):
     title: str = Field(..., description="Job title")
     date: str = Field(..., description="Job posting date or last updated date")
+
+
+@retry(stop=stop_after_attempt(4), wait=wait_exponential(multiplier=1, min=2, max=16))
+async def crawl(crawler, url, crawler_config):
+    result = await crawler.arun(
+        url=url,
+        config=crawler_config,
+    )
+    if not result.success:
+        raise Exception(f"Error: {result.status_code}")
+    else:
+        return result
 
 
 async def main():
@@ -36,7 +53,6 @@ async def main():
     crawler_config = CrawlerRunConfig(  # type: ignore
         magic=True,
         simulate_user=True,
-        override_navigator=True,
         markdown_generator=md_generator,
         delay_before_return_html=5,
         word_count_threshold=1,
@@ -72,10 +88,8 @@ async def main():
     async with AsyncWebCrawler(config=browser_config) as crawler:  # type: ignore
         for source in sources:
             jobs = []
-            result = await crawler.arun(
-                url=source["url"],
-                config=crawler_config,
-            )
+
+            result = await crawl(crawler, source["url"], crawler_config)
 
             ### FOR TESTING ###
             # with open("raw_html.txt", "w") as file:
@@ -93,20 +107,23 @@ async def main():
             # with open("result.txt", "w") as file:
             #     file.write(result.extracted_content)
 
-            contents: List(dict) = json.loads(result.extracted_content)  # type: ignore
-            for content in contents:
-                try:
-                    job = {}
-                    job["title"] = content["title"]
-                    job["category_id"] = int(source["category_id"])
-                    job["date"] = content["date"]
-                    job["last_refreshed"] = now_str
-                    jobs.append(job)
-                except Exception as e:
-                    print(f"Error processing job: {e}, content: {content}")
-                    continue
+            try:
+                contents: List[dict] = json.loads(result.extracted_content)
+                for content in contents:
+                    try:
+                        job = {}
+                        job["title"] = content["title"]
+                        job["category_id"] = int(source["category_id"])
+                        job["date"] = content["date"]
+                        job["last_refreshed"] = now_str
+                        jobs.append(job)
+                    except Exception as e:
+                        print(f"Error processing job: {e}, content: {content}")
+                        continue
 
-            requests.post(url=submit_jobs_url, json=jobs)
+                requests.post(url=submit_jobs_url, json=jobs)
+            except Exception as e:
+                print(f"Error {e} while parsing json from: {result.extracted_content}")
 
 
 if __name__ == "__main__":
