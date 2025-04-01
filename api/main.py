@@ -48,7 +48,7 @@ def get_sources():
             .where(Category.company_id == Company.id)
             .order_by(
                 asc(Company.name),
-                desc(Category.name),
+                asc(Category.name),
             )
         )
 
