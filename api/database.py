@@ -5,11 +5,11 @@ from sources import all_sources
 
 DATABASE_URL = "postgresql://postgres:example@localhost:5432/postgres"
 engine = create_engine(DATABASE_URL)
+models = [Category, Company, Job]
 
 
 def get_engine():
     inspector = inspect(engine)
-    models = [Category, Company, Job]
     tables = [model.__tablename__ for model in models]
     missing_tables = [table for table in tables if not inspector.has_table(table)]
 
