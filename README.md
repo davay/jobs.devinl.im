@@ -1,4 +1,6 @@
-# THIS README IS A LITTLE OUT OF DATE!!
+# jobs.devinl.im
+
+A site that scrapes jobs directly from company portals with LLM-powered scrapers, so I don't have to manually write parsers.
 
 ## Description
 
@@ -10,9 +12,9 @@ There are browser extensions that automatically watch for changes, but that stil
 
 There is a site that do this: [JobRadar](https://www.jobradar.live/) but it seems that they're missing a lot of companies and is not user-configurable.
 
-So I want to make a similar site except that users can set their own sites and keywords to monitor, with all configuration data saved locally in caches (export will be allowed).
+The goal is a site where user can add sites to track themselves, but right now a config file is used. There're also cost concerns as the number of sources grow.
 
-## Quickstart 
+## Quickstart
 
 Install uv 
 
